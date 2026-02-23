@@ -1,0 +1,209 @@
+2026-01-28 00:03:11 [main] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-28 00:03:13 [main] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory initialisé avec succès
+2026-01-28 00:03:13 [main] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-28 00:03:17 [main] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: ASHY
+2026-01-28 00:03:17 [main] INFO  c.A.config.TestUserInitializer - Utilisateur de test existe déjà: ASHY
+2026-01-28 00:03:18 [main] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter initialisé
+2026-01-28 00:05:05 [http-nio-8080-exec-1] DEBUG c.A.filter.AuthenticationFilter - Redirection vers login pour: /dashboard
+2026-01-28 00:05:26 [http-nio-8080-exec-2] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: 29533CCAC7EA7491AD7A49D7F1FC6756
+2026-01-28 00:05:40 [http-nio-8080-exec-4] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: Nounou
+2026-01-28 00:05:41 [http-nio-8080-exec-4] DEBUG com.Ash_Conversion.dao.UserDAO - Date de dernière connexion mise à jour pour: Nounou
+2026-01-28 00:05:41 [http-nio-8080-exec-4] INFO  c.Ash_Conversion.service.UserService - Utilisateur connecté avec succès: Nounou
+2026-01-28 00:05:41 [http-nio-8080-exec-5] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par ID: 2
+2026-01-28 00:05:41 [http-nio-8080-exec-5] DEBUG c.A.service.FileJobService - Statistiques récupérées pour l'utilisateur: Nounou
+2026-01-28 00:05:43 [http-nio-8080-exec-5] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: D8ACEFC9FB819E153B089A8C9793EB18
+2026-01-28 00:06:47 [http-nio-8080-exec-8] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par ID: 2
+2026-01-28 00:06:47 [http-nio-8080-exec-8] DEBUG c.A.service.FileJobService - Statistiques récupérées pour l'utilisateur: Nounou
+2026-01-28 00:20:05 [main] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-28 00:20:07 [main] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory initialisé avec succès
+2026-01-28 00:20:07 [main] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-28 00:20:10 [main] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: ASHY
+2026-01-28 00:20:10 [main] INFO  c.A.config.TestUserInitializer - Utilisateur de test existe déjà: ASHY
+2026-01-28 00:20:11 [main] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter initialisé
+2026-01-28 00:21:31 [http-nio-8080-exec-1] DEBUG c.A.filter.AuthenticationFilter - Redirection vers login pour: /dashboard
+2026-01-28 00:21:35 [http-nio-8080-exec-2] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: D88F43486A28C8544DF7D4AE14F89DF6
+2026-01-28 00:22:03 [http-nio-8080-exec-5] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: Nounou
+2026-01-28 00:22:04 [http-nio-8080-exec-5] DEBUG com.Ash_Conversion.dao.UserDAO - Date de dernière connexion mise à jour pour: Nounou
+2026-01-28 00:22:04 [http-nio-8080-exec-5] INFO  c.Ash_Conversion.service.UserService - Utilisateur connecté avec succès: Nounou
+2026-01-28 00:22:04 [http-nio-8080-exec-6] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par ID: 2
+2026-01-28 00:22:04 [http-nio-8080-exec-6] DEBUG c.A.service.FileJobService - Statistiques récupérées pour l'utilisateur: Nounou
+2026-01-28 00:22:06 [http-nio-8080-exec-6] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: 370AAE491BFF28F60BC304B57C5F0102
+2026-01-28 00:46:34 [Catalina-utility-2] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter détruit
+2026-01-28 00:46:34 [Catalina-utility-2] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory fermé
+2026-01-28 00:47:17 [Catalina-utility-2] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-28 00:47:19 [Catalina-utility-2] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory initialisé avec succès
+2026-01-28 00:47:19 [Catalina-utility-2] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-28 00:47:23 [Catalina-utility-2] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: ASHY
+2026-01-28 00:47:23 [Catalina-utility-2] INFO  c.A.config.TestUserInitializer - Utilisateur de test existe déjà: ASHY
+2026-01-28 00:47:23 [Catalina-utility-2] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter initialisé
+2026-01-28 00:48:49 [http-nio-8080-exec-11] DEBUG c.A.filter.AuthenticationFilter - Redirection vers login pour: /dashboard
+2026-01-28 00:48:50 [http-nio-8080-exec-8] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: C7EF15A04F3373DCC6EF4EEE4F8A2C57
+2026-01-28 00:49:11 [http-nio-8080-exec-2] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: Nounou
+2026-01-28 00:49:12 [http-nio-8080-exec-2] DEBUG com.Ash_Conversion.dao.UserDAO - Date de dernière connexion mise à jour pour: Nounou
+2026-01-28 00:49:12 [http-nio-8080-exec-2] INFO  c.Ash_Conversion.service.UserService - Utilisateur connecté avec succès: Nounou
+2026-01-28 00:49:12 [http-nio-8080-exec-3] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par ID: 2
+2026-01-28 00:49:12 [http-nio-8080-exec-3] DEBUG c.A.service.FileJobService - Statistiques récupérées pour l'utilisateur: Nounou
+2026-01-28 00:49:14 [http-nio-8080-exec-3] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: 1EBC08310353B2DBFF9ED5BFC986875E
+2026-01-28 01:11:05 [main] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-28 01:11:08 [main] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory initialisé avec succès
+2026-01-28 01:11:08 [main] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-28 01:11:14 [main] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: ASHY
+2026-01-28 01:11:14 [main] INFO  c.A.config.TestUserInitializer - Utilisateur de test existe déjà: ASHY
+2026-01-28 01:11:14 [main] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter initialisé
+2026-01-28 01:12:38 [http-nio-8080-exec-1] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: 6E06FCA72DC9CA1701B1F35D6452DE55
+2026-01-28 01:13:02 [http-nio-8080-exec-5] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: Nounou
+2026-01-28 01:13:04 [http-nio-8080-exec-5] DEBUG com.Ash_Conversion.dao.UserDAO - Date de dernière connexion mise à jour pour: Nounou
+2026-01-28 01:13:04 [http-nio-8080-exec-5] INFO  c.Ash_Conversion.service.UserService - Utilisateur connecté avec succès: Nounou
+2026-01-28 01:13:04 [http-nio-8080-exec-6] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par ID: 2
+2026-01-28 01:13:04 [http-nio-8080-exec-6] DEBUG c.A.service.FileJobService - Statistiques récupérées pour l'utilisateur: Nounou
+2026-01-28 01:13:06 [http-nio-8080-exec-6] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: FB937FA00B0DC7FABA683EB76B558B28
+2026-01-28 01:35:18 [Catalina-utility-2] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter détruit
+2026-01-28 01:35:18 [Catalina-utility-2] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory fermé
+2026-01-28 01:35:53 [Catalina-utility-2] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-28 01:35:55 [Catalina-utility-2] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory initialisé avec succès
+2026-01-28 01:35:55 [Catalina-utility-2] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-28 01:35:59 [Catalina-utility-2] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: ASHY
+2026-01-28 01:35:59 [Catalina-utility-2] INFO  c.A.config.TestUserInitializer - Utilisateur de test existe déjà: ASHY
+2026-01-28 01:35:59 [Catalina-utility-2] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter initialisé
+2026-01-28 01:38:18 [main] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-28 01:38:20 [main] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory initialisé avec succès
+2026-01-28 01:38:20 [main] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-28 01:38:27 [main] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: ASHY
+2026-01-28 01:38:27 [main] INFO  c.A.config.TestUserInitializer - Utilisateur de test existe déjà: ASHY
+2026-01-28 01:38:27 [main] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter initialisé
+2026-01-28 01:39:25 [http-nio-8080-exec-11] DEBUG c.A.filter.AuthenticationFilter - Redirection vers login pour: /dashboard
+2026-01-28 01:39:27 [http-nio-8080-exec-12] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: 5EE068380603EF8E33528F653D5B99F1
+2026-01-28 01:40:04 [http-nio-8080-exec-14] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: Nounou
+2026-01-28 01:40:06 [http-nio-8080-exec-14] DEBUG com.Ash_Conversion.dao.UserDAO - Date de dernière connexion mise à jour pour: Nounou
+2026-01-28 01:40:06 [http-nio-8080-exec-14] INFO  c.Ash_Conversion.service.UserService - Utilisateur connecté avec succès: Nounou
+2026-01-28 01:40:06 [http-nio-8080-exec-8] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par ID: 2
+2026-01-28 01:40:06 [http-nio-8080-exec-8] DEBUG c.A.service.FileJobService - Statistiques récupérées pour l'utilisateur: Nounou
+2026-01-28 01:40:07 [http-nio-8080-exec-8] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: 430BB75DAEF95A006133D0DF31A1ACBC
+2026-01-28 01:40:27 [http-nio-8080-exec-11] DEBUG c.A.controller.BaseController - Session utilisateur invalidée
+2026-01-28 01:40:27 [http-nio-8080-exec-12] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: 34BD52A3ACE6F1EF684BDE7FC0FFD76F
+2026-01-28 01:48:37 [http-nio-8080-exec-18] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: Nounou
+2026-01-28 01:48:40 [http-nio-8080-exec-18] DEBUG com.Ash_Conversion.dao.UserDAO - Date de dernière connexion mise à jour pour: Nounou
+2026-01-28 01:48:40 [http-nio-8080-exec-18] INFO  c.Ash_Conversion.service.UserService - Utilisateur connecté avec succès: Nounou
+2026-01-28 01:48:40 [http-nio-8080-exec-11] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par ID: 2
+2026-01-28 01:48:40 [http-nio-8080-exec-11] DEBUG c.A.service.FileJobService - Statistiques récupérées pour l'utilisateur: Nounou
+2026-01-28 01:48:40 [http-nio-8080-exec-11] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: 12F969E21F470BFCE08A5B90E7651EE4
+2026-01-28 02:00:15 [main] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-28 02:00:17 [main] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory initialisé avec succès
+2026-01-28 02:00:17 [main] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-28 02:00:21 [main] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: ASHY
+2026-01-28 02:00:21 [main] INFO  c.A.config.TestUserInitializer - Utilisateur de test existe déjà: ASHY
+2026-01-28 02:00:21 [main] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter initialisé
+2026-01-28 02:01:05 [http-nio-8080-exec-1] DEBUG c.A.filter.AuthenticationFilter - Redirection vers login pour: /dashboard
+2026-01-28 02:01:10 [http-nio-8080-exec-2] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: C35706958E2D3C159EA26C10F6A1CA69
+2026-01-28 02:01:22 [http-nio-8080-exec-3] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: Nounou
+2026-01-28 02:01:23 [http-nio-8080-exec-3] DEBUG com.Ash_Conversion.dao.UserDAO - Date de dernière connexion mise à jour pour: Nounou
+2026-01-28 02:01:23 [http-nio-8080-exec-3] INFO  c.Ash_Conversion.service.UserService - Utilisateur connecté avec succès: Nounou
+2026-01-28 02:01:23 [http-nio-8080-exec-4] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par ID: 2
+2026-01-28 02:01:23 [http-nio-8080-exec-4] DEBUG c.A.service.FileJobService - Statistiques récupérées pour l'utilisateur: Nounou
+2026-01-28 02:01:25 [http-nio-8080-exec-4] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: B8606FD6F0EFB5CDF18674A5426F5566
+2026-01-28 02:13:42 [main] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-28 02:13:44 [main] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory initialisé avec succès
+2026-01-28 02:13:44 [main] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-28 02:13:50 [main] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: ASHY
+2026-01-28 02:13:50 [main] INFO  c.A.config.TestUserInitializer - Utilisateur de test existe déjà: ASHY
+2026-01-28 02:13:50 [main] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter initialisé
+2026-01-28 02:14:20 [http-nio-8080-exec-1] DEBUG c.A.filter.AuthenticationFilter - Redirection vers login pour: /dashboard
+2026-01-28 02:14:31 [http-nio-8080-exec-2] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: 1BCC7126F5B121AFAEBE468B4534FE7A
+2026-01-28 02:15:30 [http-nio-8080-exec-5] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: Nounou
+2026-01-28 02:15:32 [http-nio-8080-exec-5] DEBUG com.Ash_Conversion.dao.UserDAO - Date de dernière connexion mise à jour pour: Nounou
+2026-01-28 02:15:32 [http-nio-8080-exec-5] INFO  c.Ash_Conversion.service.UserService - Utilisateur connecté avec succès: Nounou
+2026-01-28 02:15:32 [http-nio-8080-exec-6] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par ID: 2
+2026-01-28 02:15:32 [http-nio-8080-exec-6] DEBUG c.A.service.FileJobService - Statistiques récupérées pour l'utilisateur: Nounou
+2026-01-28 02:15:34 [http-nio-8080-exec-6] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: 65BFE1F7D6341B3C24C48DB5B2847DFB
+2026-01-28 02:38:37 [Catalina-utility-2] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter détruit
+2026-01-28 02:38:37 [Catalina-utility-2] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory fermé
+2026-01-28 02:42:44 [main] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-28 02:42:45 [Catalina-utility-2] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-28 02:42:47 [main] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory initialisé avec succès
+2026-01-28 02:42:47 [main] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-28 02:42:47 [Catalina-utility-2] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory initialisé avec succès
+2026-01-28 02:42:47 [Catalina-utility-2] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-28 02:42:51 [Catalina-utility-2] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: ASHY
+2026-01-28 02:42:51 [Catalina-utility-2] INFO  c.A.config.TestUserInitializer - Utilisateur de test existe déjà: ASHY
+2026-01-28 02:42:51 [Catalina-utility-2] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter initialisé
+2026-01-28 02:42:51 [main] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: ASHY
+2026-01-28 02:42:51 [main] INFO  c.A.config.TestUserInitializer - Utilisateur de test existe déjà: ASHY
+2026-01-28 02:42:51 [main] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter initialisé
+2026-01-28 02:44:13 [http-nio-8080-exec-8] DEBUG c.A.filter.AuthenticationFilter - Redirection vers login pour: /dashboard
+2026-01-28 02:44:15 [http-nio-8080-exec-1] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: 6577BCC2AB27B1631B51BB704A739FE1
+2026-01-28 02:44:38 [http-nio-8080-exec-14] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: Nounou
+2026-01-28 02:44:39 [http-nio-8080-exec-14] DEBUG com.Ash_Conversion.dao.UserDAO - Date de dernière connexion mise à jour pour: Nounou
+2026-01-28 02:44:39 [http-nio-8080-exec-14] INFO  c.Ash_Conversion.service.UserService - Utilisateur connecté avec succès: Nounou
+2026-01-28 02:44:39 [http-nio-8080-exec-16] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par ID: 2
+2026-01-28 02:44:40 [http-nio-8080-exec-16] DEBUG c.A.service.FileJobService - Statistiques récupérées pour l'utilisateur: Nounou
+2026-01-28 02:44:41 [http-nio-8080-exec-16] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: 55FA0A360C20CC516A3CBE9FA77E75A9
+2026-01-28 02:59:44 [Catalina-utility-2] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter détruit
+2026-01-28 02:59:44 [Catalina-utility-2] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory fermé
+2026-01-28 02:59:47 [Catalina-utility-1] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter détruit
+2026-01-28 02:59:47 [Catalina-utility-1] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory fermé
+2026-01-28 03:00:28 [Catalina-utility-2] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-28 03:00:29 [Catalina-utility-1] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-28 03:00:31 [Catalina-utility-2] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory initialisé avec succès
+2026-01-28 03:00:31 [Catalina-utility-2] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-28 03:00:31 [Catalina-utility-1] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory initialisé avec succès
+2026-01-28 03:00:31 [Catalina-utility-1] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-28 03:00:36 [Catalina-utility-2] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: ASHY
+2026-01-28 03:00:36 [Catalina-utility-2] INFO  c.A.config.TestUserInitializer - Utilisateur de test existe déjà: ASHY
+2026-01-28 03:00:36 [Catalina-utility-2] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter initialisé
+2026-01-28 03:00:36 [Catalina-utility-1] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: ASHY
+2026-01-28 03:00:36 [Catalina-utility-1] INFO  c.A.config.TestUserInitializer - Utilisateur de test existe déjà: ASHY
+2026-01-28 03:00:36 [Catalina-utility-1] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter initialisé
+2026-01-28 03:00:49 [Catalina-utility-2] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-28 03:00:51 [Catalina-utility-2] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory initialisé avec succès
+2026-01-28 03:00:51 [Catalina-utility-2] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-28 03:00:59 [Catalina-utility-2] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: ASHY
+2026-01-28 03:00:59 [Catalina-utility-2] INFO  c.A.config.TestUserInitializer - Utilisateur de test existe déjà: ASHY
+2026-01-28 03:00:59 [Catalina-utility-2] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter initialisé
+2026-01-28 03:09:26 [main] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-28 03:09:29 [main] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory initialisé avec succès
+2026-01-28 03:09:29 [main] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-28 03:09:33 [main] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: ASHY
+2026-01-28 03:09:33 [main] INFO  c.A.config.TestUserInitializer - Utilisateur de test existe déjà: ASHY
+2026-01-28 03:09:33 [main] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter initialisé
+2026-01-28 03:09:48 [http-nio-8080-exec-1] DEBUG c.A.filter.AuthenticationFilter - Redirection vers login pour: /dashboard
+2026-01-28 03:09:53 [http-nio-8080-exec-2] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: CE03B9DECCBECD61CDEAC4C0A5DBE9EF
+2026-01-28 03:10:28 [http-nio-8080-exec-6] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: Nounou
+2026-01-28 03:10:29 [http-nio-8080-exec-6] DEBUG com.Ash_Conversion.dao.UserDAO - Date de dernière connexion mise à jour pour: Nounou
+2026-01-28 03:10:29 [http-nio-8080-exec-6] INFO  c.Ash_Conversion.service.UserService - Utilisateur connecté avec succès: Nounou
+2026-01-28 03:10:29 [http-nio-8080-exec-7] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par ID: 2
+2026-01-28 03:10:30 [http-nio-8080-exec-7] DEBUG c.A.service.FileJobService - Statistiques récupérées pour l'utilisateur: Nounou
+2026-01-28 03:10:31 [http-nio-8080-exec-7] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: F35F7DEFC90EE297F766992F780262E6
+2026-01-28 03:22:15 [Catalina-utility-1] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter détruit
+2026-01-28 03:22:15 [Catalina-utility-1] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory fermé
+2026-01-28 03:22:54 [main] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-28 03:22:55 [Catalina-utility-2] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-28 03:22:58 [Catalina-utility-2] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory initialisé avec succès
+2026-01-28 03:22:58 [Catalina-utility-2] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-28 03:23:01 [main] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory initialisé avec succès
+2026-01-28 03:23:01 [main] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-28 03:23:05 [Catalina-utility-2] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: ASHY
+2026-01-28 03:23:05 [Catalina-utility-2] INFO  c.A.config.TestUserInitializer - Utilisateur de test existe déjà: ASHY
+2026-01-28 03:23:05 [Catalina-utility-2] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter initialisé
+2026-01-28 03:23:14 [main] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: ASHY
+2026-01-28 03:23:14 [main] INFO  c.A.config.TestUserInitializer - Utilisateur de test existe déjà: ASHY
+2026-01-28 03:23:15 [main] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter initialisé
+2026-01-28 23:25:19 [main] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-28 23:25:22 [main] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory initialisé avec succès
+2026-01-28 23:25:22 [main] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-28 23:25:38 [main] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: ASHY
+2026-01-28 23:25:38 [main] INFO  c.A.config.TestUserInitializer - Utilisateur de test existe déjà: ASHY
+2026-01-28 23:25:39 [main] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter initialisé
+2026-01-28 23:27:48 [http-nio-8080-exec-3] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: D786FA0520D9E47BD262566F5BA8686D
+2026-01-28 23:28:17 [http-nio-8080-exec-7] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: Nounou
+2026-01-28 23:28:18 [http-nio-8080-exec-7] WARN  c.Ash_Conversion.service.UserService - Tentative de connexion avec un mot de passe incorrect pour: Nounou
+2026-01-28 23:28:18 [http-nio-8080-exec-7] WARN  c.A.controller.BaseController - Échec de connexion: Nom d'utilisateur ou mot de passe incorrect
+2026-01-28 23:29:46 [http-nio-8080-exec-1] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: Nounou
+2026-01-28 23:29:54 [http-nio-8080-exec-1] DEBUG com.Ash_Conversion.dao.UserDAO - Date de dernière connexion mise à jour pour: Nounou
+2026-01-28 23:29:54 [http-nio-8080-exec-1] INFO  c.Ash_Conversion.service.UserService - Utilisateur connecté avec succès: Nounou
+2026-01-28 23:29:54 [http-nio-8080-exec-3] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par ID: 2
+2026-01-28 23:29:54 [http-nio-8080-exec-3] DEBUG c.A.service.FileJobService - Statistiques récupérées pour l'utilisateur: Nounou
+2026-01-28 23:29:59 [http-nio-8080-exec-3] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: 4D2E54C23F44A0DF18277A2C957ED184
+2026-01-28 23:30:44 [http-nio-8080-exec-5] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par ID: 2
+2026-01-28 23:30:44 [http-nio-8080-exec-5] DEBUG c.A.service.FileJobService - Statistiques récupérées pour l'utilisateur: Nounou
+2026-01-28 23:30:52 [http-nio-8080-exec-6] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par ID: 2
+2026-01-28 23:30:52 [http-nio-8080-exec-6] DEBUG c.A.service.FileJobService - Statistiques récupérées pour l'utilisateur: Nounou

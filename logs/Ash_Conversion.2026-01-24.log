@@ -1,0 +1,1814 @@
+2026-01-24 05:05:09 [main] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-24 05:05:09 [main] INFO  c.A.config.DatabaseInitializer - Création de l'EntityManagerFactory...
+2026-01-24 05:05:10 [main] INFO  c.A.config.DatabaseInitializer - Test de connexion à MySQL...
+2026-01-24 05:05:13 [main] INFO  c.A.config.DatabaseInitializer - Base de données MySQL initialisée avec succès
+2026-01-24 05:05:13 [main] INFO  c.A.config.DatabaseInitializer - Base de données: Ash_Conversion@localhost:3306
+2026-01-24 05:05:13 [main] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-24 05:05:14 [main] ERROR com.Ash_Conversion.dao.UserDAO - Erreur lors de la recherche de l'utilisateur par username: ASHY
+java.lang.IllegalArgumentException: An exception occurred while creating a query in EntityManager: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1728)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1749)
+	at com.Ash_Conversion.dao.UserDAO.findByUsername(UserDAO.java:142)
+	at com.Ash_Conversion.config.TestUserInitializer.contextInitialized(TestUserInitializer.java:51)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4046)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4474)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:965)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:769)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:420)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1621)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:303)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:389)
+	at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:336)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:776)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:761)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+Caused by: org.eclipse.persistence.exceptions.JPQLException: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildException(HermesParser.java:159)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.validate(HermesParser.java:337)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.populateQueryImp(HermesParser.java:271)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildQuery(HermesParser.java:164)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:141)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:117)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:104)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:88)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1726)
+	... 42 common frames omitted
+2026-01-24 05:05:15 [main] DEBUG c.Ash_Conversion.util.PasswordUtil - Mot de passe haché avec succès
+2026-01-24 05:05:15 [main] INFO  com.Ash_Conversion.dao.UserDAO - Début de la création de l'utilisateur: ASHY
+2026-01-24 05:05:15 [main] ERROR com.Ash_Conversion.dao.UserDAO - Erreur inattendue lors de la création de l'utilisateur: ASHY
+java.lang.IllegalArgumentException: Object: com.Ash_Conversion.model.entity.User@3dc03beb is not a known Entity type.
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.registerNewObjectForPersist(UnitOfWorkImpl.java:4422)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.persist(EntityManagerImpl.java:599)
+	at com.Ash_Conversion.dao.UserDAO.create(UserDAO.java:54)
+	at com.Ash_Conversion.config.TestUserInitializer.contextInitialized(TestUserInitializer.java:62)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4046)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4474)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:965)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:769)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:420)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1621)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:303)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:389)
+	at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:336)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:776)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:761)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+2026-01-24 05:05:15 [main] ERROR com.Ash_Conversion.dao.UserDAO - Type d'erreur: java.lang.IllegalArgumentException
+2026-01-24 05:05:15 [main] ERROR com.Ash_Conversion.dao.UserDAO - Message: Object: com.Ash_Conversion.model.entity.User@3dc03beb is not a known Entity type.
+2026-01-24 05:05:15 [main] ERROR c.A.config.TestUserInitializer - Erreur lors de la création de l'utilisateur de test
+java.lang.RuntimeException: Erreur lors de la création de l'utilisateur: Object: com.Ash_Conversion.model.entity.User@3dc03beb is not a known Entity type.
+	at com.Ash_Conversion.dao.UserDAO.create(UserDAO.java:99)
+	at com.Ash_Conversion.config.TestUserInitializer.contextInitialized(TestUserInitializer.java:62)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4046)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4474)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:965)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:769)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:420)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1621)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:303)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:389)
+	at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:336)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:776)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:761)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+Caused by: java.lang.IllegalArgumentException: Object: com.Ash_Conversion.model.entity.User@3dc03beb is not a known Entity type.
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.registerNewObjectForPersist(UnitOfWorkImpl.java:4422)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.persist(EntityManagerImpl.java:599)
+	at com.Ash_Conversion.dao.UserDAO.create(UserDAO.java:54)
+	... 40 common frames omitted
+2026-01-24 05:05:15 [main] ERROR c.A.config.TestUserInitializer - Type d'erreur: java.lang.RuntimeException
+2026-01-24 05:05:15 [main] ERROR c.A.config.TestUserInitializer - Message: Erreur lors de la création de l'utilisateur: Object: com.Ash_Conversion.model.entity.User@3dc03beb is not a known Entity type.
+2026-01-24 05:05:15 [main] ERROR c.A.config.TestUserInitializer - Cause: Object: com.Ash_Conversion.model.entity.User@3dc03beb is not a known Entity type.
+2026-01-24 05:05:15 [main] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter initialisé
+2026-01-24 05:07:26 [http-nio-8080-exec-5] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: 7100FA4212944FFCDD76C83401EE1237
+2026-01-24 05:08:05 [http-nio-8080-exec-8] ERROR com.Ash_Conversion.dao.UserDAO - Erreur lors de la recherche de l'utilisateur par username: Nounou
+java.lang.IllegalArgumentException: An exception occurred while creating a query in EntityManager: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1728)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1749)
+	at com.Ash_Conversion.dao.UserDAO.findByUsername(UserDAO.java:142)
+	at com.Ash_Conversion.service.UserService.login(UserService.java:132)
+	at com.Ash_Conversion.controller.LoginServlet.doPost(LoginServlet.java:64)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.Ash_Conversion.filter.EncodingFilter.doFilter(EncodingFilter.java:18)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:598)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:666)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.eclipse.persistence.exceptions.JPQLException: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildException(HermesParser.java:159)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.validate(HermesParser.java:337)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.populateQueryImp(HermesParser.java:271)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildQuery(HermesParser.java:164)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:141)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:117)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:104)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:88)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1726)
+	... 31 common frames omitted
+2026-01-24 05:08:05 [http-nio-8080-exec-8] WARN  c.Ash_Conversion.service.UserService - Tentative de connexion avec un username inexistant: Nounou
+2026-01-24 05:08:05 [http-nio-8080-exec-8] WARN  c.A.controller.BaseController - Échec de connexion: Nom d'utilisateur ou mot de passe incorrect
+2026-01-24 05:08:24 [http-nio-8080-exec-10] ERROR com.Ash_Conversion.dao.UserDAO - Erreur lors de la recherche de l'utilisateur par username: ASHY
+java.lang.IllegalArgumentException: An exception occurred while creating a query in EntityManager: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1728)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1749)
+	at com.Ash_Conversion.dao.UserDAO.findByUsername(UserDAO.java:142)
+	at com.Ash_Conversion.service.UserService.login(UserService.java:132)
+	at com.Ash_Conversion.controller.LoginServlet.doPost(LoginServlet.java:64)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.Ash_Conversion.filter.EncodingFilter.doFilter(EncodingFilter.java:18)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:598)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:666)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.eclipse.persistence.exceptions.JPQLException: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildException(HermesParser.java:159)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.validate(HermesParser.java:337)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.populateQueryImp(HermesParser.java:271)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildQuery(HermesParser.java:164)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:141)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:117)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:104)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:88)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1726)
+	... 31 common frames omitted
+2026-01-24 05:08:24 [http-nio-8080-exec-10] WARN  c.Ash_Conversion.service.UserService - Tentative de connexion avec un username inexistant: ASHY
+2026-01-24 05:08:24 [http-nio-8080-exec-10] WARN  c.A.controller.BaseController - Échec de connexion: Nom d'utilisateur ou mot de passe incorrect
+2026-01-24 09:40:02 [main] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-24 09:40:02 [main] INFO  c.A.config.DatabaseInitializer - Création de l'EntityManagerFactory...
+2026-01-24 09:40:03 [main] INFO  c.A.config.DatabaseInitializer - Test de connexion à MySQL...
+2026-01-24 09:40:08 [main] INFO  c.A.config.DatabaseInitializer - Base de données MySQL initialisée avec succès
+2026-01-24 09:40:08 [main] INFO  c.A.config.DatabaseInitializer - Base de données: Ash_Conversion@localhost:3306
+2026-01-24 09:40:08 [main] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-24 09:40:10 [main] ERROR com.Ash_Conversion.dao.UserDAO - Erreur lors de la recherche de l'utilisateur par username: ASHY
+java.lang.IllegalArgumentException: An exception occurred while creating a query in EntityManager: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1728)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1749)
+	at com.Ash_Conversion.dao.UserDAO.findByUsername(UserDAO.java:142)
+	at com.Ash_Conversion.config.TestUserInitializer.contextInitialized(TestUserInitializer.java:51)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4046)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4474)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:965)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:769)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:420)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1621)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:303)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:389)
+	at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:336)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:776)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:761)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+Caused by: org.eclipse.persistence.exceptions.JPQLException: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildException(HermesParser.java:159)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.validate(HermesParser.java:337)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.populateQueryImp(HermesParser.java:271)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildQuery(HermesParser.java:164)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:141)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:117)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:104)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:88)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1726)
+	... 42 common frames omitted
+2026-01-24 09:40:11 [main] DEBUG c.Ash_Conversion.util.PasswordUtil - Mot de passe haché avec succès
+2026-01-24 09:40:11 [main] INFO  com.Ash_Conversion.dao.UserDAO - Début de la création de l'utilisateur: ASHY
+2026-01-24 09:40:11 [main] ERROR com.Ash_Conversion.dao.UserDAO - Erreur inattendue lors de la création de l'utilisateur: ASHY
+java.lang.IllegalArgumentException: Object: com.Ash_Conversion.model.entity.User@698b32d5 is not a known Entity type.
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.registerNewObjectForPersist(UnitOfWorkImpl.java:4422)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.persist(EntityManagerImpl.java:599)
+	at com.Ash_Conversion.dao.UserDAO.create(UserDAO.java:54)
+	at com.Ash_Conversion.config.TestUserInitializer.contextInitialized(TestUserInitializer.java:62)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4046)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4474)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:965)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:769)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:420)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1621)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:303)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:389)
+	at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:336)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:776)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:761)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+2026-01-24 09:40:11 [main] ERROR com.Ash_Conversion.dao.UserDAO - Type d'erreur: java.lang.IllegalArgumentException
+2026-01-24 09:40:11 [main] ERROR com.Ash_Conversion.dao.UserDAO - Message: Object: com.Ash_Conversion.model.entity.User@698b32d5 is not a known Entity type.
+2026-01-24 09:40:11 [main] ERROR c.A.config.TestUserInitializer - Erreur lors de la création de l'utilisateur de test
+java.lang.RuntimeException: Erreur lors de la création de l'utilisateur: Object: com.Ash_Conversion.model.entity.User@698b32d5 is not a known Entity type.
+	at com.Ash_Conversion.dao.UserDAO.create(UserDAO.java:99)
+	at com.Ash_Conversion.config.TestUserInitializer.contextInitialized(TestUserInitializer.java:62)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4046)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4474)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:965)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:769)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:420)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1621)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:303)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:389)
+	at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:336)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:776)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:761)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+Caused by: java.lang.IllegalArgumentException: Object: com.Ash_Conversion.model.entity.User@698b32d5 is not a known Entity type.
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.registerNewObjectForPersist(UnitOfWorkImpl.java:4422)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.persist(EntityManagerImpl.java:599)
+	at com.Ash_Conversion.dao.UserDAO.create(UserDAO.java:54)
+	... 40 common frames omitted
+2026-01-24 09:40:11 [main] ERROR c.A.config.TestUserInitializer - Type d'erreur: java.lang.RuntimeException
+2026-01-24 09:40:11 [main] ERROR c.A.config.TestUserInitializer - Message: Erreur lors de la création de l'utilisateur: Object: com.Ash_Conversion.model.entity.User@698b32d5 is not a known Entity type.
+2026-01-24 09:40:11 [main] ERROR c.A.config.TestUserInitializer - Cause: Object: com.Ash_Conversion.model.entity.User@698b32d5 is not a known Entity type.
+2026-01-24 09:40:11 [main] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter initialisé
+2026-01-24 09:41:51 [http-nio-8080-exec-3] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: 38ADFFC771B10DC2420D52169DB6FAA8
+2026-01-24 09:43:17 [http-nio-8080-exec-7] ERROR com.Ash_Conversion.dao.UserDAO - Erreur lors de la recherche de l'utilisateur par username: ASHY
+java.lang.IllegalArgumentException: An exception occurred while creating a query in EntityManager: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1728)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1749)
+	at com.Ash_Conversion.dao.UserDAO.findByUsername(UserDAO.java:142)
+	at com.Ash_Conversion.service.UserService.login(UserService.java:132)
+	at com.Ash_Conversion.controller.LoginServlet.doPost(LoginServlet.java:64)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.Ash_Conversion.filter.EncodingFilter.doFilter(EncodingFilter.java:18)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:598)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:666)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.eclipse.persistence.exceptions.JPQLException: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildException(HermesParser.java:159)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.validate(HermesParser.java:337)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.populateQueryImp(HermesParser.java:271)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildQuery(HermesParser.java:164)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:141)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:117)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:104)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:88)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1726)
+	... 31 common frames omitted
+2026-01-24 09:43:17 [http-nio-8080-exec-7] WARN  c.Ash_Conversion.service.UserService - Tentative de connexion avec un username inexistant: ASHY
+2026-01-24 09:43:17 [http-nio-8080-exec-7] WARN  c.A.controller.BaseController - Échec de connexion: Nom d'utilisateur ou mot de passe incorrect
+2026-01-24 09:44:05 [http-nio-8080-exec-1] ERROR com.Ash_Conversion.dao.UserDAO - Erreur lors de la recherche de l'utilisateur par username: ASHY
+java.lang.IllegalArgumentException: An exception occurred while creating a query in EntityManager: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1728)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1749)
+	at com.Ash_Conversion.dao.UserDAO.findByUsername(UserDAO.java:142)
+	at com.Ash_Conversion.service.UserService.login(UserService.java:132)
+	at com.Ash_Conversion.controller.LoginServlet.doPost(LoginServlet.java:64)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.Ash_Conversion.filter.EncodingFilter.doFilter(EncodingFilter.java:18)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:598)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:666)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.eclipse.persistence.exceptions.JPQLException: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildException(HermesParser.java:159)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.validate(HermesParser.java:337)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.populateQueryImp(HermesParser.java:271)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildQuery(HermesParser.java:164)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:141)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:117)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:104)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:88)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1726)
+	... 31 common frames omitted
+2026-01-24 09:44:06 [http-nio-8080-exec-1] WARN  c.Ash_Conversion.service.UserService - Tentative de connexion avec un username inexistant: ASHY
+2026-01-24 09:44:06 [http-nio-8080-exec-1] WARN  c.A.controller.BaseController - Échec de connexion: Nom d'utilisateur ou mot de passe incorrect
+2026-01-24 09:46:11 [http-nio-8080-exec-8] INFO  c.A.controller.BaseController - Tentative d'inscription pour username: Nounou, email: nounou@gmail.com
+2026-01-24 09:46:11 [http-nio-8080-exec-8] ERROR com.Ash_Conversion.dao.UserDAO - Erreur lors de la recherche de l'utilisateur par username: Nounou
+java.lang.IllegalArgumentException: An exception occurred while creating a query in EntityManager: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1728)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1749)
+	at com.Ash_Conversion.dao.UserDAO.findByUsername(UserDAO.java:142)
+	at com.Ash_Conversion.service.UserService.register(UserService.java:63)
+	at com.Ash_Conversion.controller.RegisterServlet.doPost(RegisterServlet.java:75)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.Ash_Conversion.filter.EncodingFilter.doFilter(EncodingFilter.java:18)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:598)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:666)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.eclipse.persistence.exceptions.JPQLException: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildException(HermesParser.java:159)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.validate(HermesParser.java:337)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.populateQueryImp(HermesParser.java:271)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildQuery(HermesParser.java:164)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:141)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:117)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:104)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:88)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1726)
+	... 31 common frames omitted
+2026-01-24 09:46:11 [http-nio-8080-exec-8] ERROR com.Ash_Conversion.dao.UserDAO - Erreur lors de la recherche de l'utilisateur par email: nounou@gmail.com
+java.lang.IllegalArgumentException: An exception occurred while creating a query in EntityManager: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.email = :email]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 34] The state field path 'u.email' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1728)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1749)
+	at com.Ash_Conversion.dao.UserDAO.findByEmail(UserDAO.java:171)
+	at com.Ash_Conversion.service.UserService.register(UserService.java:74)
+	at com.Ash_Conversion.controller.RegisterServlet.doPost(RegisterServlet.java:75)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.Ash_Conversion.filter.EncodingFilter.doFilter(EncodingFilter.java:18)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:598)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:666)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.eclipse.persistence.exceptions.JPQLException: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.email = :email]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 34] The state field path 'u.email' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildException(HermesParser.java:159)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.validate(HermesParser.java:337)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.populateQueryImp(HermesParser.java:271)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildQuery(HermesParser.java:164)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:141)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:117)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:104)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:88)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1726)
+	... 31 common frames omitted
+2026-01-24 09:46:12 [http-nio-8080-exec-8] DEBUG c.Ash_Conversion.util.PasswordUtil - Mot de passe haché avec succès
+2026-01-24 09:46:12 [http-nio-8080-exec-8] DEBUG c.Ash_Conversion.service.UserService - Appel de userDAO.create() pour username: Nounou
+2026-01-24 09:46:12 [http-nio-8080-exec-8] INFO  com.Ash_Conversion.dao.UserDAO - Début de la création de l'utilisateur: Nounou
+2026-01-24 09:46:12 [http-nio-8080-exec-8] ERROR com.Ash_Conversion.dao.UserDAO - Erreur inattendue lors de la création de l'utilisateur: Nounou
+java.lang.IllegalArgumentException: Object: com.Ash_Conversion.model.entity.User@efd2ec8 is not a known Entity type.
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.registerNewObjectForPersist(UnitOfWorkImpl.java:4422)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.persist(EntityManagerImpl.java:599)
+	at com.Ash_Conversion.dao.UserDAO.create(UserDAO.java:54)
+	at com.Ash_Conversion.service.UserService.register(UserService.java:94)
+	at com.Ash_Conversion.controller.RegisterServlet.doPost(RegisterServlet.java:75)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.Ash_Conversion.filter.EncodingFilter.doFilter(EncodingFilter.java:18)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:598)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:666)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-01-24 09:46:12 [http-nio-8080-exec-8] ERROR com.Ash_Conversion.dao.UserDAO - Type d'erreur: java.lang.IllegalArgumentException
+2026-01-24 09:46:12 [http-nio-8080-exec-8] ERROR com.Ash_Conversion.dao.UserDAO - Message: Object: com.Ash_Conversion.model.entity.User@efd2ec8 is not a known Entity type.
+2026-01-24 09:46:12 [http-nio-8080-exec-8] ERROR c.Ash_Conversion.service.UserService - RuntimeException lors de la création de l'utilisateur: Erreur lors de la création de l'utilisateur: Object: com.Ash_Conversion.model.entity.User@efd2ec8 is not a known Entity type.
+java.lang.RuntimeException: Erreur lors de la création de l'utilisateur: Object: com.Ash_Conversion.model.entity.User@efd2ec8 is not a known Entity type.
+	at com.Ash_Conversion.dao.UserDAO.create(UserDAO.java:99)
+	at com.Ash_Conversion.service.UserService.register(UserService.java:94)
+	at com.Ash_Conversion.controller.RegisterServlet.doPost(RegisterServlet.java:75)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.Ash_Conversion.filter.EncodingFilter.doFilter(EncodingFilter.java:18)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:598)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:666)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.IllegalArgumentException: Object: com.Ash_Conversion.model.entity.User@efd2ec8 is not a known Entity type.
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.registerNewObjectForPersist(UnitOfWorkImpl.java:4422)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.persist(EntityManagerImpl.java:599)
+	at com.Ash_Conversion.dao.UserDAO.create(UserDAO.java:54)
+	... 29 common frames omitted
+2026-01-24 09:46:12 [http-nio-8080-exec-8] ERROR c.A.controller.BaseController - Erreur lors de l'inscription
+java.lang.RuntimeException: Erreur lors de la création de l'utilisateur: Erreur lors de la création de l'utilisateur: Object: com.Ash_Conversion.model.entity.User@efd2ec8 is not a known Entity type.
+	at com.Ash_Conversion.service.UserService.register(UserService.java:111)
+	at com.Ash_Conversion.controller.RegisterServlet.doPost(RegisterServlet.java:75)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.Ash_Conversion.filter.EncodingFilter.doFilter(EncodingFilter.java:18)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:598)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:666)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.RuntimeException: Erreur lors de la création de l'utilisateur: Object: com.Ash_Conversion.model.entity.User@efd2ec8 is not a known Entity type.
+	at com.Ash_Conversion.dao.UserDAO.create(UserDAO.java:99)
+	at com.Ash_Conversion.service.UserService.register(UserService.java:94)
+	... 28 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Object: com.Ash_Conversion.model.entity.User@efd2ec8 is not a known Entity type.
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.registerNewObjectForPersist(UnitOfWorkImpl.java:4422)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.persist(EntityManagerImpl.java:599)
+	at com.Ash_Conversion.dao.UserDAO.create(UserDAO.java:54)
+	... 29 common frames omitted
+2026-01-24 09:46:12 [http-nio-8080-exec-8] ERROR c.A.controller.BaseController - Type d'erreur: java.lang.RuntimeException
+2026-01-24 09:46:12 [http-nio-8080-exec-8] ERROR c.A.controller.BaseController - Message: Erreur lors de la création de l'utilisateur: Erreur lors de la création de l'utilisateur: Object: com.Ash_Conversion.model.entity.User@efd2ec8 is not a known Entity type.
+2026-01-24 09:46:12 [http-nio-8080-exec-8] ERROR c.A.controller.BaseController - Cause: java.lang.RuntimeException - Erreur lors de la création de l'utilisateur: Object: com.Ash_Conversion.model.entity.User@efd2ec8 is not a known Entity type.
+2026-01-24 09:46:12 [http-nio-8080-exec-8] ERROR c.A.controller.BaseController - Stack trace complète:
+java.lang.RuntimeException: Erreur lors de la création de l'utilisateur: Erreur lors de la création de l'utilisateur: Object: com.Ash_Conversion.model.entity.User@efd2ec8 is not a known Entity type.
+	at com.Ash_Conversion.service.UserService.register(UserService.java:111)
+	at com.Ash_Conversion.controller.RegisterServlet.doPost(RegisterServlet.java:75)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.Ash_Conversion.filter.EncodingFilter.doFilter(EncodingFilter.java:18)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:598)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:666)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.RuntimeException: Erreur lors de la création de l'utilisateur: Object: com.Ash_Conversion.model.entity.User@efd2ec8 is not a known Entity type.
+	at com.Ash_Conversion.dao.UserDAO.create(UserDAO.java:99)
+	at com.Ash_Conversion.service.UserService.register(UserService.java:94)
+	... 28 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Object: com.Ash_Conversion.model.entity.User@efd2ec8 is not a known Entity type.
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.registerNewObjectForPersist(UnitOfWorkImpl.java:4422)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.persist(EntityManagerImpl.java:599)
+	at com.Ash_Conversion.dao.UserDAO.create(UserDAO.java:54)
+	... 29 common frames omitted
+2026-01-24 09:50:29 [http-nio-8080-exec-5] ERROR com.Ash_Conversion.dao.UserDAO - Erreur lors de la recherche de l'utilisateur par username: ASHY
+java.lang.IllegalArgumentException: An exception occurred while creating a query in EntityManager: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1728)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1749)
+	at com.Ash_Conversion.dao.UserDAO.findByUsername(UserDAO.java:142)
+	at com.Ash_Conversion.service.UserService.login(UserService.java:132)
+	at com.Ash_Conversion.controller.LoginServlet.doPost(LoginServlet.java:64)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.Ash_Conversion.filter.EncodingFilter.doFilter(EncodingFilter.java:18)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:598)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:666)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.eclipse.persistence.exceptions.JPQLException: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildException(HermesParser.java:159)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.validate(HermesParser.java:337)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.populateQueryImp(HermesParser.java:271)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildQuery(HermesParser.java:164)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:141)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:117)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:104)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:88)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1726)
+	... 31 common frames omitted
+2026-01-24 09:50:29 [http-nio-8080-exec-5] WARN  c.Ash_Conversion.service.UserService - Tentative de connexion avec un username inexistant: ASHY
+2026-01-24 09:50:29 [http-nio-8080-exec-5] WARN  c.A.controller.BaseController - Échec de connexion: Nom d'utilisateur ou mot de passe incorrect
+2026-01-24 09:50:58 [http-nio-8080-exec-9] ERROR com.Ash_Conversion.dao.UserDAO - Erreur lors de la recherche de l'utilisateur par username: ASHY
+java.lang.IllegalArgumentException: An exception occurred while creating a query in EntityManager: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1728)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1749)
+	at com.Ash_Conversion.dao.UserDAO.findByUsername(UserDAO.java:142)
+	at com.Ash_Conversion.service.UserService.login(UserService.java:132)
+	at com.Ash_Conversion.controller.LoginServlet.doPost(LoginServlet.java:64)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.Ash_Conversion.filter.EncodingFilter.doFilter(EncodingFilter.java:18)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:598)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:666)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.eclipse.persistence.exceptions.JPQLException: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildException(HermesParser.java:159)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.validate(HermesParser.java:337)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.populateQueryImp(HermesParser.java:271)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildQuery(HermesParser.java:164)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:141)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:117)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:104)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:88)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1726)
+	... 31 common frames omitted
+2026-01-24 09:50:58 [http-nio-8080-exec-9] WARN  c.Ash_Conversion.service.UserService - Tentative de connexion avec un username inexistant: ASHY
+2026-01-24 09:50:58 [http-nio-8080-exec-9] WARN  c.A.controller.BaseController - Échec de connexion: Nom d'utilisateur ou mot de passe incorrect
+2026-01-24 09:51:34 [http-nio-8080-exec-4] ERROR com.Ash_Conversion.dao.UserDAO - Erreur lors de la recherche de l'utilisateur par username: ASHY
+java.lang.IllegalArgumentException: An exception occurred while creating a query in EntityManager: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1728)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1749)
+	at com.Ash_Conversion.dao.UserDAO.findByUsername(UserDAO.java:142)
+	at com.Ash_Conversion.service.UserService.login(UserService.java:132)
+	at com.Ash_Conversion.controller.LoginServlet.doPost(LoginServlet.java:64)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.Ash_Conversion.filter.EncodingFilter.doFilter(EncodingFilter.java:18)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:598)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:666)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.eclipse.persistence.exceptions.JPQLException: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildException(HermesParser.java:159)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.validate(HermesParser.java:337)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.populateQueryImp(HermesParser.java:271)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildQuery(HermesParser.java:164)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:141)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:117)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:104)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:88)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1726)
+	... 31 common frames omitted
+2026-01-24 09:51:34 [http-nio-8080-exec-4] WARN  c.Ash_Conversion.service.UserService - Tentative de connexion avec un username inexistant: ASHY
+2026-01-24 09:51:34 [http-nio-8080-exec-4] WARN  c.A.controller.BaseController - Échec de connexion: Nom d'utilisateur ou mot de passe incorrect
+2026-01-24 09:58:44 [Catalina-utility-1] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter détruit
+2026-01-24 09:58:44 [Catalina-utility-1] INFO  c.A.config.DatabaseInitializer - Base de données fermée
+2026-01-24 10:00:21 [Catalina-utility-1] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-24 10:00:21 [Catalina-utility-1] INFO  c.A.config.DatabaseInitializer - Création de l'EntityManagerFactory...
+2026-01-24 10:00:22 [Catalina-utility-1] INFO  c.A.config.DatabaseInitializer - Test de connexion à MySQL...
+2026-01-24 10:00:23 [Catalina-utility-1] INFO  c.A.config.DatabaseInitializer - Base de données MySQL initialisée avec succès
+2026-01-24 10:00:23 [Catalina-utility-1] INFO  c.A.config.DatabaseInitializer - Base de données: Ash_Conversion@localhost:3306
+2026-01-24 10:00:23 [Catalina-utility-1] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-24 10:00:25 [Catalina-utility-1] ERROR com.Ash_Conversion.dao.UserDAO - Erreur lors de la recherche de l'utilisateur par username: ASHY
+java.lang.IllegalArgumentException: An exception occurred while creating a query in EntityManager: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1728)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1749)
+	at com.Ash_Conversion.dao.UserDAO.findByUsername(UserDAO.java:142)
+	at com.Ash_Conversion.config.TestUserInitializer.contextInitialized(TestUserInitializer.java:51)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4046)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4474)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:965)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:769)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:420)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1670)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:299)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:973)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1172)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1154)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.eclipse.persistence.exceptions.JPQLException: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildException(HermesParser.java:159)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.validate(HermesParser.java:337)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.populateQueryImp(HermesParser.java:271)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildQuery(HermesParser.java:164)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:141)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:117)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:104)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:88)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1726)
+	... 31 common frames omitted
+2026-01-24 10:00:25 [Catalina-utility-1] DEBUG c.Ash_Conversion.util.PasswordUtil - Mot de passe haché avec succès
+2026-01-24 10:00:25 [Catalina-utility-1] INFO  com.Ash_Conversion.dao.UserDAO - Début de la création de l'utilisateur: ASHY
+2026-01-24 10:00:26 [Catalina-utility-1] ERROR com.Ash_Conversion.dao.UserDAO - Erreur inattendue lors de la création de l'utilisateur: ASHY
+java.lang.IllegalArgumentException: Object: com.Ash_Conversion.model.entity.User@3a5da31f is not a known Entity type.
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.registerNewObjectForPersist(UnitOfWorkImpl.java:4422)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.persist(EntityManagerImpl.java:599)
+	at com.Ash_Conversion.dao.UserDAO.create(UserDAO.java:54)
+	at com.Ash_Conversion.config.TestUserInitializer.contextInitialized(TestUserInitializer.java:62)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4046)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4474)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:965)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:769)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:420)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1670)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:299)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:973)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1172)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1154)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-01-24 10:00:26 [Catalina-utility-1] ERROR com.Ash_Conversion.dao.UserDAO - Type d'erreur: java.lang.IllegalArgumentException
+2026-01-24 10:00:26 [Catalina-utility-1] ERROR com.Ash_Conversion.dao.UserDAO - Message: Object: com.Ash_Conversion.model.entity.User@3a5da31f is not a known Entity type.
+2026-01-24 10:00:26 [Catalina-utility-1] ERROR c.A.config.TestUserInitializer - Erreur lors de la création de l'utilisateur de test
+java.lang.RuntimeException: Erreur lors de la création de l'utilisateur: Object: com.Ash_Conversion.model.entity.User@3a5da31f is not a known Entity type.
+	at com.Ash_Conversion.dao.UserDAO.create(UserDAO.java:99)
+	at com.Ash_Conversion.config.TestUserInitializer.contextInitialized(TestUserInitializer.java:62)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4046)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4474)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:965)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:769)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:420)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1670)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:299)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:973)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1172)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1154)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.IllegalArgumentException: Object: com.Ash_Conversion.model.entity.User@3a5da31f is not a known Entity type.
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.registerNewObjectForPersist(UnitOfWorkImpl.java:4422)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.persist(EntityManagerImpl.java:599)
+	at com.Ash_Conversion.dao.UserDAO.create(UserDAO.java:54)
+	... 29 common frames omitted
+2026-01-24 10:00:26 [Catalina-utility-1] ERROR c.A.config.TestUserInitializer - Type d'erreur: java.lang.RuntimeException
+2026-01-24 10:00:26 [Catalina-utility-1] ERROR c.A.config.TestUserInitializer - Message: Erreur lors de la création de l'utilisateur: Object: com.Ash_Conversion.model.entity.User@3a5da31f is not a known Entity type.
+2026-01-24 10:00:26 [Catalina-utility-1] ERROR c.A.config.TestUserInitializer - Cause: Object: com.Ash_Conversion.model.entity.User@3a5da31f is not a known Entity type.
+2026-01-24 10:00:26 [Catalina-utility-1] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter initialisé
+2026-01-24 10:00:46 [Catalina-utility-1] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-24 10:00:46 [Catalina-utility-1] INFO  c.A.config.DatabaseInitializer - Création de l'EntityManagerFactory...
+2026-01-24 10:00:49 [Catalina-utility-1] INFO  c.A.config.DatabaseInitializer - Test de connexion à MySQL...
+2026-01-24 10:00:56 [Catalina-utility-1] INFO  c.A.config.DatabaseInitializer - Base de données MySQL initialisée avec succès
+2026-01-24 10:00:56 [Catalina-utility-1] INFO  c.A.config.DatabaseInitializer - Base de données: Ash_Conversion@localhost:3306
+2026-01-24 10:00:56 [Catalina-utility-1] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-24 10:00:58 [Catalina-utility-1] ERROR com.Ash_Conversion.dao.UserDAO - Erreur lors de la recherche de l'utilisateur par username: ASHY
+java.lang.IllegalArgumentException: An exception occurred while creating a query in EntityManager: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1728)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1749)
+	at com.Ash_Conversion.dao.UserDAO.findByUsername(UserDAO.java:142)
+	at com.Ash_Conversion.config.TestUserInitializer.contextInitialized(TestUserInitializer.java:51)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4046)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4474)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.HostConfig.reload(HostConfig.java:1465)
+	at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1431)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1657)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:299)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:973)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1172)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1154)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.eclipse.persistence.exceptions.JPQLException: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildException(HermesParser.java:159)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.validate(HermesParser.java:337)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.populateQueryImp(HermesParser.java:271)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildQuery(HermesParser.java:164)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:141)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:117)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:104)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:88)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1726)
+	... 22 common frames omitted
+2026-01-24 10:00:59 [Catalina-utility-1] DEBUG c.Ash_Conversion.util.PasswordUtil - Mot de passe haché avec succès
+2026-01-24 10:00:59 [Catalina-utility-1] INFO  com.Ash_Conversion.dao.UserDAO - Début de la création de l'utilisateur: ASHY
+2026-01-24 10:00:59 [Catalina-utility-1] ERROR com.Ash_Conversion.dao.UserDAO - Erreur inattendue lors de la création de l'utilisateur: ASHY
+java.lang.IllegalArgumentException: Object: com.Ash_Conversion.model.entity.User@7e0fce9f is not a known Entity type.
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.registerNewObjectForPersist(UnitOfWorkImpl.java:4422)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.persist(EntityManagerImpl.java:599)
+	at com.Ash_Conversion.dao.UserDAO.create(UserDAO.java:54)
+	at com.Ash_Conversion.config.TestUserInitializer.contextInitialized(TestUserInitializer.java:62)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4046)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4474)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.HostConfig.reload(HostConfig.java:1465)
+	at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1431)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1657)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:299)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:973)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1172)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1154)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-01-24 10:00:59 [Catalina-utility-1] ERROR com.Ash_Conversion.dao.UserDAO - Type d'erreur: java.lang.IllegalArgumentException
+2026-01-24 10:00:59 [Catalina-utility-1] ERROR com.Ash_Conversion.dao.UserDAO - Message: Object: com.Ash_Conversion.model.entity.User@7e0fce9f is not a known Entity type.
+2026-01-24 10:00:59 [Catalina-utility-1] ERROR c.A.config.TestUserInitializer - Erreur lors de la création de l'utilisateur de test
+java.lang.RuntimeException: Erreur lors de la création de l'utilisateur: Object: com.Ash_Conversion.model.entity.User@7e0fce9f is not a known Entity type.
+	at com.Ash_Conversion.dao.UserDAO.create(UserDAO.java:99)
+	at com.Ash_Conversion.config.TestUserInitializer.contextInitialized(TestUserInitializer.java:62)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4046)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4474)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.HostConfig.reload(HostConfig.java:1465)
+	at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1431)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1657)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:299)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:973)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1172)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1154)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.IllegalArgumentException: Object: com.Ash_Conversion.model.entity.User@7e0fce9f is not a known Entity type.
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.registerNewObjectForPersist(UnitOfWorkImpl.java:4422)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.persist(EntityManagerImpl.java:599)
+	at com.Ash_Conversion.dao.UserDAO.create(UserDAO.java:54)
+	... 20 common frames omitted
+2026-01-24 10:00:59 [Catalina-utility-1] ERROR c.A.config.TestUserInitializer - Type d'erreur: java.lang.RuntimeException
+2026-01-24 10:00:59 [Catalina-utility-1] ERROR c.A.config.TestUserInitializer - Message: Erreur lors de la création de l'utilisateur: Object: com.Ash_Conversion.model.entity.User@7e0fce9f is not a known Entity type.
+2026-01-24 10:00:59 [Catalina-utility-1] ERROR c.A.config.TestUserInitializer - Cause: Object: com.Ash_Conversion.model.entity.User@7e0fce9f is not a known Entity type.
+2026-01-24 10:00:59 [Catalina-utility-1] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter initialisé
+2026-01-24 10:04:42 [http-nio-8080-exec-11] WARN  c.Ash_Conversion.util.CsrfTokenUtil - Tentative de validation CSRF sans session
+2026-01-24 10:04:42 [http-nio-8080-exec-11] WARN  c.A.controller.BaseController - Tentative d'accès avec token CSRF invalide depuis: 0:0:0:0:0:0:0:1
+2026-01-24 10:04:46 [http-nio-8080-exec-12] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: 8895984D4832F66C9FE9DA13EEA4A951
+2026-01-24 10:11:14 [http-nio-8080-exec-15] ERROR com.Ash_Conversion.dao.UserDAO - Erreur lors de la recherche de l'utilisateur par username: ASHY
+java.lang.IllegalArgumentException: An exception occurred while creating a query in EntityManager: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1728)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1749)
+	at com.Ash_Conversion.dao.UserDAO.findByUsername(UserDAO.java:142)
+	at com.Ash_Conversion.service.UserService.login(UserService.java:132)
+	at com.Ash_Conversion.controller.LoginServlet.doPost(LoginServlet.java:64)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.Ash_Conversion.filter.EncodingFilter.doFilter(EncodingFilter.java:18)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:598)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:666)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.eclipse.persistence.exceptions.JPQLException: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildException(HermesParser.java:159)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.validate(HermesParser.java:337)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.populateQueryImp(HermesParser.java:271)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildQuery(HermesParser.java:164)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:141)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:117)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:104)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:88)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1726)
+	... 31 common frames omitted
+2026-01-24 10:11:14 [http-nio-8080-exec-15] WARN  c.Ash_Conversion.service.UserService - Tentative de connexion avec un username inexistant: ASHY
+2026-01-24 10:11:14 [http-nio-8080-exec-15] WARN  c.A.controller.BaseController - Échec de connexion: Nom d'utilisateur ou mot de passe incorrect
+2026-01-24 10:13:17 [http-nio-8080-exec-13] ERROR com.Ash_Conversion.dao.UserDAO - Erreur lors de la recherche de l'utilisateur par username: ASHY
+java.lang.IllegalArgumentException: An exception occurred while creating a query in EntityManager: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1728)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1749)
+	at com.Ash_Conversion.dao.UserDAO.findByUsername(UserDAO.java:142)
+	at com.Ash_Conversion.service.UserService.login(UserService.java:132)
+	at com.Ash_Conversion.controller.LoginServlet.doPost(LoginServlet.java:64)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.Ash_Conversion.filter.EncodingFilter.doFilter(EncodingFilter.java:18)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:598)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:666)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.eclipse.persistence.exceptions.JPQLException: 
+Exception Description: Problem compiling [SELECT u FROM User u WHERE u.username = :username]. 
+[14, 18] The abstract schema type 'User' is unknown.
+[27, 37] The state field path 'u.username' cannot be resolved to a valid type.
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildException(HermesParser.java:159)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.validate(HermesParser.java:337)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.populateQueryImp(HermesParser.java:271)
+	at org.eclipse.persistence.internal.jpa.jpql.HermesParser.buildQuery(HermesParser.java:164)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:141)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.buildEJBQLDatabaseQuery(EJBQueryImpl.java:117)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:104)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.<init>(EJBQueryImpl.java:88)
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createQuery(EntityManagerImpl.java:1726)
+	... 31 common frames omitted
+2026-01-24 10:13:17 [http-nio-8080-exec-13] WARN  c.Ash_Conversion.service.UserService - Tentative de connexion avec un username inexistant: ASHY
+2026-01-24 10:13:17 [http-nio-8080-exec-13] WARN  c.A.controller.BaseController - Échec de connexion: Nom d'utilisateur ou mot de passe incorrect
+2026-01-24 10:38:11 [main] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-24 10:38:11 [main] INFO  c.A.config.DatabaseInitializer - Création de l'EntityManagerFactory...
+2026-01-24 10:38:13 [main] ERROR c.A.config.DatabaseInitializer - Erreur lors de l'initialisation de la base de données
+org.eclipse.persistence.exceptions.PersistenceUnitLoadingException: 
+Exception Description: An exception was thrown while searching for persistence archives with ClassLoader: ParallelWebappClassLoader
+  context: Ash_Conversion
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@17d10166
+
+Internal Exception: jakarta.persistence.PersistenceException: Exception [EclipseLink-28018] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [Ash_ConversionPU] failed.
+Internal Exception: Exception [EclipseLink-7250] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.exceptions.PersistenceUnitLoadingException.exceptionSearchingForPersistenceResources(PersistenceUnitLoadingException.java:129)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:118)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactory(PersistenceProvider.java:191)
+	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:80)
+	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
+	at com.Ash_Conversion.config.DatabaseInitializer.contextInitialized(DatabaseInitializer.java:30)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4046)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4474)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:965)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:769)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:420)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1621)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:303)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:389)
+	at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:336)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:776)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:761)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+Caused by: jakarta.persistence.PersistenceException: Exception [EclipseLink-28018] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [Ash_ConversionPU] failed.
+Internal Exception: Exception [EclipseLink-7250] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.createPredeployFailedPersistenceException(EntityManagerSetupImpl.java:2150)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:2126)
+	at org.eclipse.persistence.internal.jpa.deployment.JPAInitializer.callPredeploy(JPAInitializer.java:107)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:107)
+	... 43 common frames omitted
+Caused by: org.eclipse.persistence.exceptions.EntityManagerSetupException: 
+Exception Description: Predeployment of PersistenceUnit [Ash_ConversionPU] failed.
+Internal Exception: Exception [EclipseLink-7250] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.predeployFailed(EntityManagerSetupException.java:233)
+	... 47 common frames omitted
+Caused by: org.eclipse.persistence.exceptions.ValidationException: 
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.exceptions.ValidationException.nonEntityTargetInRelationship(ValidationException.java:1390)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.RelationshipAccessor.getReferenceDescriptor(RelationshipAccessor.java:577)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.ObjectAccessor.processForeignKeyRelationship(ObjectAccessor.java:678)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.ObjectAccessor.processOwningMappingKeys(ObjectAccessor.java:752)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.ManyToOneAccessor.process(ManyToOneAccessor.java:132)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProject.processOwningRelationshipAccessors(MetadataProject.java:1657)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProject.processStage3(MetadataProject.java:1914)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProcessor.processORMMetadata(MetadataProcessor.java:604)
+	at org.eclipse.persistence.internal.jpa.deployment.PersistenceUnitProcessor.processORMetadata(PersistenceUnitProcessor.java:644)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:2047)
+	... 45 common frames omitted
+2026-01-24 10:38:13 [main] ERROR c.A.config.DatabaseInitializer - Type d'erreur: org.eclipse.persistence.exceptions.PersistenceUnitLoadingException
+2026-01-24 10:38:13 [main] ERROR c.A.config.DatabaseInitializer - Message: 
+Exception Description: An exception was thrown while searching for persistence archives with ClassLoader: ParallelWebappClassLoader
+  context: Ash_Conversion
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@17d10166
+
+Internal Exception: jakarta.persistence.PersistenceException: Exception [EclipseLink-28018] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [Ash_ConversionPU] failed.
+Internal Exception: Exception [EclipseLink-7250] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+2026-01-24 10:38:13 [main] ERROR c.A.config.DatabaseInitializer - Cause: Exception [EclipseLink-28018] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [Ash_ConversionPU] failed.
+Internal Exception: Exception [EclipseLink-7250] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+2026-01-24 10:38:13 [main] WARN  c.A.config.DatabaseInitializer - ATTENTION: L'application démarre sans connexion MySQL. Les fonctionnalités de base de données ne seront pas disponibles.
+2026-01-24 10:38:13 [main] WARN  c.A.config.DatabaseInitializer - Vérifiez que MySQL est démarré et que les credentials dans persistence.xml sont corrects.
+2026-01-24 10:38:13 [main] WARN  c.A.config.DatabaseInitializer - User: root, Database: Ash_Conversion, Host: localhost:3306
+2026-01-24 10:38:13 [main] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-24 10:38:14 [main] WARN  c.A.config.TestUserInitializer - EntityManagerFactory non initialisé, attente supplémentaire...
+2026-01-24 10:38:15 [main] ERROR c.A.config.TestUserInitializer - Impossible d'initialiser l'utilisateur de test: EntityManagerFactory non disponible
+2026-01-24 10:38:15 [main] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter initialisé
+2026-01-24 10:47:20 [http-nio-8080-exec-3] WARN  c.Ash_Conversion.util.CsrfTokenUtil - Tentative de validation CSRF sans session
+2026-01-24 10:47:20 [http-nio-8080-exec-3] WARN  c.A.controller.BaseController - Tentative d'accès avec token CSRF invalide depuis: 0:0:0:0:0:0:0:1
+2026-01-24 10:47:32 [http-nio-8080-exec-4] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: 96CF3B23505B1D69134D9088CBB71CA3
+2026-01-24 10:48:48 [http-nio-8080-exec-7] ERROR com.Ash_Conversion.dao.UserDAO - Erreur lors de la recherche de l'utilisateur par username: ASHY
+java.lang.IllegalStateException: EntityManagerFactory non initialisé
+	at com.Ash_Conversion.config.DatabaseConfig.getEntityManager(DatabaseConfig.java:11)
+	at com.Ash_Conversion.dao.UserDAO.findByUsername(UserDAO.java:141)
+	at com.Ash_Conversion.service.UserService.login(UserService.java:132)
+	at com.Ash_Conversion.controller.LoginServlet.doPost(LoginServlet.java:64)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.Ash_Conversion.filter.EncodingFilter.doFilter(EncodingFilter.java:18)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:598)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:666)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-01-24 10:48:48 [http-nio-8080-exec-7] WARN  c.Ash_Conversion.service.UserService - Tentative de connexion avec un username inexistant: ASHY
+2026-01-24 10:48:48 [http-nio-8080-exec-7] WARN  c.A.controller.BaseController - Échec de connexion: Nom d'utilisateur ou mot de passe incorrect
+2026-01-24 10:59:53 [Catalina-utility-2] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter détruit
+2026-01-24 11:17:32 [Catalina-utility-2] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-24 11:17:35 [Catalina-utility-1] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-24 11:17:38 [Catalina-utility-2] ERROR c.A.config.DatabaseInitializer - ❌ Échec critique : impossible d'initialiser la base de données
+org.eclipse.persistence.exceptions.PersistenceUnitLoadingException: 
+Exception Description: An exception was thrown while searching for persistence archives with ClassLoader: ParallelWebappClassLoader
+  context: Ash_Conversion
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@17d10166
+
+Internal Exception: jakarta.persistence.PersistenceException: Exception [EclipseLink-28018] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [Ash_ConversionPU] failed.
+Internal Exception: Exception [EclipseLink-7250] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.exceptions.PersistenceUnitLoadingException.exceptionSearchingForPersistenceResources(PersistenceUnitLoadingException.java:129)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:118)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactory(PersistenceProvider.java:191)
+	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:80)
+	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
+	at com.Ash_Conversion.config.DatabaseInitializer.contextInitialized(DatabaseInitializer.java:21)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4046)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4474)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:965)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:769)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:420)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1670)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:299)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:973)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1172)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1154)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: jakarta.persistence.PersistenceException: Exception [EclipseLink-28018] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [Ash_ConversionPU] failed.
+Internal Exception: Exception [EclipseLink-7250] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.createPredeployFailedPersistenceException(EntityManagerSetupImpl.java:2150)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:2126)
+	at org.eclipse.persistence.internal.jpa.deployment.JPAInitializer.callPredeploy(JPAInitializer.java:107)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:107)
+	... 32 common frames omitted
+Caused by: org.eclipse.persistence.exceptions.EntityManagerSetupException: 
+Exception Description: Predeployment of PersistenceUnit [Ash_ConversionPU] failed.
+Internal Exception: Exception [EclipseLink-7250] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.predeployFailed(EntityManagerSetupException.java:233)
+	... 36 common frames omitted
+Caused by: org.eclipse.persistence.exceptions.ValidationException: 
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.exceptions.ValidationException.nonEntityTargetInRelationship(ValidationException.java:1390)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.RelationshipAccessor.getReferenceDescriptor(RelationshipAccessor.java:577)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.ObjectAccessor.processForeignKeyRelationship(ObjectAccessor.java:678)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.ObjectAccessor.processOwningMappingKeys(ObjectAccessor.java:752)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.ManyToOneAccessor.process(ManyToOneAccessor.java:132)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProject.processOwningRelationshipAccessors(MetadataProject.java:1657)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProject.processStage3(MetadataProject.java:1914)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProcessor.processORMMetadata(MetadataProcessor.java:604)
+	at org.eclipse.persistence.internal.jpa.deployment.PersistenceUnitProcessor.processORMetadata(PersistenceUnitProcessor.java:644)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:2047)
+	... 34 common frames omitted
+2026-01-24 11:17:38 [Catalina-utility-2] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-24 11:17:38 [Catalina-utility-2] ERROR c.A.config.TestUserInitializer - Erreur lors de la création de l'utilisateur de test
+java.lang.IllegalStateException: EntityManagerFactory non initialisé
+	at com.Ash_Conversion.config.DatabaseInitializer.getEntityManagerFactory(DatabaseInitializer.java:40)
+	at com.Ash_Conversion.config.TestUserInitializer.contextInitialized(TestUserInitializer.java:39)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4046)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4474)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:965)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:769)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:420)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1670)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:299)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:973)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1172)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1154)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-01-24 11:17:38 [Catalina-utility-2] ERROR c.A.config.TestUserInitializer - Type d'erreur: java.lang.IllegalStateException
+2026-01-24 11:17:38 [Catalina-utility-2] ERROR c.A.config.TestUserInitializer - Message: EntityManagerFactory non initialisé
+2026-01-24 11:17:40 [Catalina-utility-1] ERROR c.A.config.DatabaseInitializer - ❌ Échec critique : impossible d'initialiser la base de données
+org.eclipse.persistence.exceptions.PersistenceUnitLoadingException: 
+Exception Description: An exception was thrown while searching for persistence archives with ClassLoader: ParallelWebappClassLoader
+  context: Ash_Conversion
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@17d10166
+
+Internal Exception: jakarta.persistence.PersistenceException: Exception [EclipseLink-28018] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [Ash_ConversionPU] failed.
+Internal Exception: Exception [EclipseLink-7250] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.exceptions.PersistenceUnitLoadingException.exceptionSearchingForPersistenceResources(PersistenceUnitLoadingException.java:129)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:118)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactory(PersistenceProvider.java:191)
+	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:80)
+	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
+	at com.Ash_Conversion.config.DatabaseInitializer.contextInitialized(DatabaseInitializer.java:21)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4046)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4474)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3258)
+	at org.apache.catalina.startup.HostConfig.reload(HostConfig.java:1456)
+	at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1431)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1657)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:299)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:973)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1172)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1154)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: jakarta.persistence.PersistenceException: Exception [EclipseLink-28018] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [Ash_ConversionPU] failed.
+Internal Exception: Exception [EclipseLink-7250] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.createPredeployFailedPersistenceException(EntityManagerSetupImpl.java:2150)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:2126)
+	at org.eclipse.persistence.internal.jpa.deployment.JPAInitializer.callPredeploy(JPAInitializer.java:107)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:107)
+	... 24 common frames omitted
+Caused by: org.eclipse.persistence.exceptions.EntityManagerSetupException: 
+Exception Description: Predeployment of PersistenceUnit [Ash_ConversionPU] failed.
+Internal Exception: Exception [EclipseLink-7250] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.predeployFailed(EntityManagerSetupException.java:233)
+	... 28 common frames omitted
+Caused by: org.eclipse.persistence.exceptions.ValidationException: 
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.exceptions.ValidationException.nonEntityTargetInRelationship(ValidationException.java:1390)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.RelationshipAccessor.getReferenceDescriptor(RelationshipAccessor.java:577)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.ObjectAccessor.processForeignKeyRelationship(ObjectAccessor.java:678)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.ObjectAccessor.processOwningMappingKeys(ObjectAccessor.java:752)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.ManyToOneAccessor.process(ManyToOneAccessor.java:132)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProject.processOwningRelationshipAccessors(MetadataProject.java:1657)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProject.processStage3(MetadataProject.java:1914)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProcessor.processORMMetadata(MetadataProcessor.java:604)
+	at org.eclipse.persistence.internal.jpa.deployment.PersistenceUnitProcessor.processORMetadata(PersistenceUnitProcessor.java:644)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:2047)
+	... 26 common frames omitted
+2026-01-24 11:17:40 [Catalina-utility-1] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-24 11:17:40 [Catalina-utility-1] ERROR c.A.config.TestUserInitializer - Erreur lors de la création de l'utilisateur de test
+java.lang.IllegalStateException: EntityManagerFactory non initialisé
+	at com.Ash_Conversion.config.DatabaseInitializer.getEntityManagerFactory(DatabaseInitializer.java:40)
+	at com.Ash_Conversion.config.TestUserInitializer.contextInitialized(TestUserInitializer.java:39)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4046)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4474)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3258)
+	at org.apache.catalina.startup.HostConfig.reload(HostConfig.java:1456)
+	at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1431)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1657)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:299)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:973)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1172)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1154)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-01-24 11:17:40 [Catalina-utility-1] ERROR c.A.config.TestUserInitializer - Type d'erreur: java.lang.IllegalStateException
+2026-01-24 11:17:40 [Catalina-utility-1] ERROR c.A.config.TestUserInitializer - Message: EntityManagerFactory non initialisé
+2026-01-24 11:17:50 [main] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-24 11:17:53 [main] ERROR c.A.config.DatabaseInitializer - ❌ Échec critique : impossible d'initialiser la base de données
+org.eclipse.persistence.exceptions.PersistenceUnitLoadingException: 
+Exception Description: An exception was thrown while searching for persistence archives with ClassLoader: ParallelWebappClassLoader
+  context: Ash_Conversion
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@17d10166
+
+Internal Exception: jakarta.persistence.PersistenceException: Exception [EclipseLink-28018] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [Ash_ConversionPU] failed.
+Internal Exception: Exception [EclipseLink-7250] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.exceptions.PersistenceUnitLoadingException.exceptionSearchingForPersistenceResources(PersistenceUnitLoadingException.java:129)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:118)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactory(PersistenceProvider.java:191)
+	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:80)
+	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
+	at com.Ash_Conversion.config.DatabaseInitializer.contextInitialized(DatabaseInitializer.java:21)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4046)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4474)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:965)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:769)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:420)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1621)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:303)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:389)
+	at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:336)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:776)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:761)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+Caused by: jakarta.persistence.PersistenceException: Exception [EclipseLink-28018] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [Ash_ConversionPU] failed.
+Internal Exception: Exception [EclipseLink-7250] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.createPredeployFailedPersistenceException(EntityManagerSetupImpl.java:2150)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:2126)
+	at org.eclipse.persistence.internal.jpa.deployment.JPAInitializer.callPredeploy(JPAInitializer.java:107)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:107)
+	... 43 common frames omitted
+Caused by: org.eclipse.persistence.exceptions.EntityManagerSetupException: 
+Exception Description: Predeployment of PersistenceUnit [Ash_ConversionPU] failed.
+Internal Exception: Exception [EclipseLink-7250] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.predeployFailed(EntityManagerSetupException.java:233)
+	... 47 common frames omitted
+Caused by: org.eclipse.persistence.exceptions.ValidationException: 
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.exceptions.ValidationException.nonEntityTargetInRelationship(ValidationException.java:1390)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.RelationshipAccessor.getReferenceDescriptor(RelationshipAccessor.java:577)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.ObjectAccessor.processForeignKeyRelationship(ObjectAccessor.java:678)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.ObjectAccessor.processOwningMappingKeys(ObjectAccessor.java:752)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.ManyToOneAccessor.process(ManyToOneAccessor.java:132)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProject.processOwningRelationshipAccessors(MetadataProject.java:1657)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProject.processStage3(MetadataProject.java:1914)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProcessor.processORMMetadata(MetadataProcessor.java:604)
+	at org.eclipse.persistence.internal.jpa.deployment.PersistenceUnitProcessor.processORMetadata(PersistenceUnitProcessor.java:644)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:2047)
+	... 45 common frames omitted
+2026-01-24 11:17:53 [main] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-24 11:17:53 [main] ERROR c.A.config.TestUserInitializer - Erreur lors de la création de l'utilisateur de test
+java.lang.IllegalStateException: EntityManagerFactory non initialisé
+	at com.Ash_Conversion.config.DatabaseInitializer.getEntityManagerFactory(DatabaseInitializer.java:40)
+	at com.Ash_Conversion.config.TestUserInitializer.contextInitialized(TestUserInitializer.java:39)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4046)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4474)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:965)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:769)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:420)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1621)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:303)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:389)
+	at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:336)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:776)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:761)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+2026-01-24 11:17:53 [main] ERROR c.A.config.TestUserInitializer - Type d'erreur: java.lang.IllegalStateException
+2026-01-24 11:17:53 [main] ERROR c.A.config.TestUserInitializer - Message: EntityManagerFactory non initialisé

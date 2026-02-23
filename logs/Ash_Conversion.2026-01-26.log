@@ -1,0 +1,378 @@
+2026-01-26 21:59:49 [main] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-26 21:59:53 [main] ERROR c.A.config.DatabaseInitializer - ❌ Échec critique : impossible d'initialiser la base de données
+org.eclipse.persistence.exceptions.PersistenceUnitLoadingException: 
+Exception Description: An exception was thrown while searching for persistence archives with ClassLoader: ParallelWebappClassLoader
+  context: Ash_Conversion
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@17d10166
+
+Internal Exception: jakarta.persistence.PersistenceException: Exception [EclipseLink-28018] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [Ash_ConversionPU] failed.
+Internal Exception: Exception [EclipseLink-7250] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.exceptions.PersistenceUnitLoadingException.exceptionSearchingForPersistenceResources(PersistenceUnitLoadingException.java:129)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:118)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactory(PersistenceProvider.java:191)
+	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:80)
+	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
+	at com.Ash_Conversion.config.DatabaseInitializer.contextInitialized(DatabaseInitializer.java:21)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4046)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4474)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:965)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:769)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:420)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1621)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:303)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:389)
+	at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:336)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:776)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:761)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+Caused by: jakarta.persistence.PersistenceException: Exception [EclipseLink-28018] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [Ash_ConversionPU] failed.
+Internal Exception: Exception [EclipseLink-7250] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.createPredeployFailedPersistenceException(EntityManagerSetupImpl.java:2150)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:2126)
+	at org.eclipse.persistence.internal.jpa.deployment.JPAInitializer.callPredeploy(JPAInitializer.java:107)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:107)
+	... 43 common frames omitted
+Caused by: org.eclipse.persistence.exceptions.EntityManagerSetupException: 
+Exception Description: Predeployment of PersistenceUnit [Ash_ConversionPU] failed.
+Internal Exception: Exception [EclipseLink-7250] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.predeployFailed(EntityManagerSetupException.java:233)
+	... 47 common frames omitted
+Caused by: org.eclipse.persistence.exceptions.ValidationException: 
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.exceptions.ValidationException.nonEntityTargetInRelationship(ValidationException.java:1390)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.RelationshipAccessor.getReferenceDescriptor(RelationshipAccessor.java:577)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.ObjectAccessor.processForeignKeyRelationship(ObjectAccessor.java:678)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.ObjectAccessor.processOwningMappingKeys(ObjectAccessor.java:752)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.ManyToOneAccessor.process(ManyToOneAccessor.java:132)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProject.processOwningRelationshipAccessors(MetadataProject.java:1657)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProject.processStage3(MetadataProject.java:1914)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProcessor.processORMMetadata(MetadataProcessor.java:604)
+	at org.eclipse.persistence.internal.jpa.deployment.PersistenceUnitProcessor.processORMetadata(PersistenceUnitProcessor.java:644)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:2047)
+	... 45 common frames omitted
+2026-01-26 21:59:53 [main] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-26 21:59:53 [main] ERROR c.A.config.TestUserInitializer - Erreur lors de la création de l'utilisateur de test
+java.lang.IllegalStateException: EntityManagerFactory non initialisé
+	at com.Ash_Conversion.config.DatabaseInitializer.getEntityManagerFactory(DatabaseInitializer.java:40)
+	at com.Ash_Conversion.config.TestUserInitializer.contextInitialized(TestUserInitializer.java:39)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4046)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4474)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:965)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:769)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:420)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1621)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:303)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:389)
+	at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:336)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:776)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:761)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+2026-01-26 21:59:53 [main] ERROR c.A.config.TestUserInitializer - Type d'erreur: java.lang.IllegalStateException
+2026-01-26 21:59:53 [main] ERROR c.A.config.TestUserInitializer - Message: EntityManagerFactory non initialisé
+2026-01-26 23:00:28 [main] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-26 23:00:30 [main] ERROR c.A.config.DatabaseInitializer - ❌ Échec critique : impossible d'initialiser la base de données
+org.eclipse.persistence.exceptions.PersistenceUnitLoadingException: 
+Exception Description: An exception was thrown while searching for persistence archives with ClassLoader: ParallelWebappClassLoader
+  context: Ash_Conversion
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@17d10166
+
+Internal Exception: jakarta.persistence.PersistenceException: Exception [EclipseLink-28018] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [Ash_ConversionPU] failed.
+Internal Exception: Exception [EclipseLink-7250] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.exceptions.PersistenceUnitLoadingException.exceptionSearchingForPersistenceResources(PersistenceUnitLoadingException.java:129)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:118)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactory(PersistenceProvider.java:191)
+	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:80)
+	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
+	at com.Ash_Conversion.config.DatabaseInitializer.contextInitialized(DatabaseInitializer.java:21)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4046)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4474)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:965)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:769)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:420)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1621)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:303)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:389)
+	at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:336)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:776)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:761)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+Caused by: jakarta.persistence.PersistenceException: Exception [EclipseLink-28018] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.EntityManagerSetupException
+Exception Description: Predeployment of PersistenceUnit [Ash_ConversionPU] failed.
+Internal Exception: Exception [EclipseLink-7250] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.createPredeployFailedPersistenceException(EntityManagerSetupImpl.java:2150)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:2126)
+	at org.eclipse.persistence.internal.jpa.deployment.JPAInitializer.callPredeploy(JPAInitializer.java:107)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactoryImpl(PersistenceProvider.java:107)
+	... 43 common frames omitted
+Caused by: org.eclipse.persistence.exceptions.EntityManagerSetupException: 
+Exception Description: Predeployment of PersistenceUnit [Ash_ConversionPU] failed.
+Internal Exception: Exception [EclipseLink-7250] (Eclipse Persistence Services - 4.0.2.v202306161219): org.eclipse.persistence.exceptions.ValidationException
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.exceptions.EntityManagerSetupException.predeployFailed(EntityManagerSetupException.java:233)
+	... 47 common frames omitted
+Caused by: org.eclipse.persistence.exceptions.ValidationException: 
+Exception Description: [class com.Ash_Conversion.model.entity.FileJob] uses a non-entity [class com.Ash_Conversion.model.entity.User] as target entity in the relationship attribute [field user].
+	at org.eclipse.persistence.exceptions.ValidationException.nonEntityTargetInRelationship(ValidationException.java:1390)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.RelationshipAccessor.getReferenceDescriptor(RelationshipAccessor.java:577)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.ObjectAccessor.processForeignKeyRelationship(ObjectAccessor.java:678)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.ObjectAccessor.processOwningMappingKeys(ObjectAccessor.java:752)
+	at org.eclipse.persistence.internal.jpa.metadata.accessors.mappings.ManyToOneAccessor.process(ManyToOneAccessor.java:132)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProject.processOwningRelationshipAccessors(MetadataProject.java:1657)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProject.processStage3(MetadataProject.java:1914)
+	at org.eclipse.persistence.internal.jpa.metadata.MetadataProcessor.processORMMetadata(MetadataProcessor.java:604)
+	at org.eclipse.persistence.internal.jpa.deployment.PersistenceUnitProcessor.processORMetadata(PersistenceUnitProcessor.java:644)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.predeploy(EntityManagerSetupImpl.java:2047)
+	... 45 common frames omitted
+2026-01-26 23:00:30 [main] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-26 23:00:30 [main] ERROR c.A.config.TestUserInitializer - Erreur lors de la création de l'utilisateur de test
+java.lang.IllegalStateException: EntityManagerFactory non initialisé
+	at com.Ash_Conversion.config.DatabaseInitializer.getEntityManagerFactory(DatabaseInitializer.java:40)
+	at com.Ash_Conversion.config.TestUserInitializer.contextInitialized(TestUserInitializer.java:39)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4046)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4474)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:654)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:965)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:769)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:420)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1621)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:303)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:389)
+	at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:336)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:776)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:761)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+2026-01-26 23:00:30 [main] ERROR c.A.config.TestUserInitializer - Type d'erreur: java.lang.IllegalStateException
+2026-01-26 23:00:30 [main] ERROR c.A.config.TestUserInitializer - Message: EntityManagerFactory non initialisé
+2026-01-26 23:38:36 [main] INFO  c.A.config.DatabaseInitializer - Initialisation de la base de données MySQL...
+2026-01-26 23:38:39 [main] INFO  c.A.config.DatabaseInitializer - EntityManagerFactory initialisé avec succès
+2026-01-26 23:38:39 [main] INFO  c.A.config.TestUserInitializer - Initialisation de l'utilisateur de test...
+2026-01-26 23:38:44 [main] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: ASHY
+2026-01-26 23:38:44 [main] INFO  c.A.config.TestUserInitializer - Utilisateur de test existe déjà: ASHY
+2026-01-26 23:38:44 [main] INFO  c.A.filter.AuthenticationFilter - AuthenticationFilter initialisé
+2026-01-26 23:43:23 [http-nio-8080-exec-1] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: AED2DE5B6F3BF4F9EDE3C9569EADB7DD
+2026-01-26 23:44:00 [http-nio-8080-exec-5] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: ASHY
+2026-01-26 23:44:00 [http-nio-8080-exec-5] ERROR c.Ash_Conversion.util.PasswordUtil - Erreur lors de la vérification du mot de passe
+java.lang.IllegalArgumentException: Invalid salt version
+	at org.mindrot.jbcrypt.BCrypt.hashpw(BCrypt.java:659)
+	at org.mindrot.jbcrypt.BCrypt.checkpw(BCrypt.java:764)
+	at com.Ash_Conversion.util.PasswordUtil.checkPassword(PasswordUtil.java:51)
+	at com.Ash_Conversion.service.UserService.login(UserService.java:144)
+	at com.Ash_Conversion.controller.LoginServlet.doPost(LoginServlet.java:64)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.Ash_Conversion.filter.EncodingFilter.doFilter(EncodingFilter.java:18)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:598)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:666)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-01-26 23:44:00 [http-nio-8080-exec-5] WARN  c.Ash_Conversion.service.UserService - Tentative de connexion avec un mot de passe incorrect pour: ASHY
+2026-01-26 23:44:00 [http-nio-8080-exec-5] WARN  c.A.controller.BaseController - Échec de connexion: Nom d'utilisateur ou mot de passe incorrect
+2026-01-26 23:44:41 [http-nio-8080-exec-9] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: ASHY
+2026-01-26 23:44:41 [http-nio-8080-exec-9] ERROR c.Ash_Conversion.util.PasswordUtil - Erreur lors de la vérification du mot de passe
+java.lang.IllegalArgumentException: Invalid salt version
+	at org.mindrot.jbcrypt.BCrypt.hashpw(BCrypt.java:659)
+	at org.mindrot.jbcrypt.BCrypt.checkpw(BCrypt.java:764)
+	at com.Ash_Conversion.util.PasswordUtil.checkPassword(PasswordUtil.java:51)
+	at com.Ash_Conversion.service.UserService.login(UserService.java:144)
+	at com.Ash_Conversion.controller.LoginServlet.doPost(LoginServlet.java:64)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.Ash_Conversion.filter.EncodingFilter.doFilter(EncodingFilter.java:18)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:598)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:666)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-01-26 23:44:41 [http-nio-8080-exec-9] WARN  c.Ash_Conversion.service.UserService - Tentative de connexion avec un mot de passe incorrect pour: ASHY
+2026-01-26 23:44:41 [http-nio-8080-exec-9] WARN  c.A.controller.BaseController - Échec de connexion: Nom d'utilisateur ou mot de passe incorrect
+2026-01-26 23:45:48 [http-nio-8080-exec-4] INFO  c.A.controller.BaseController - Tentative d'inscription pour username: Nounou, email: nounou@gmail.com
+2026-01-26 23:45:48 [http-nio-8080-exec-4] DEBUG com.Ash_Conversion.dao.UserDAO - Aucun utilisateur trouvé avec le username: Nounou
+2026-01-26 23:45:48 [http-nio-8080-exec-4] DEBUG com.Ash_Conversion.dao.UserDAO - Aucun utilisateur trouvé avec l'email: nounou@gmail.com
+2026-01-26 23:45:49 [http-nio-8080-exec-4] DEBUG c.Ash_Conversion.util.PasswordUtil - Mot de passe haché avec succès
+2026-01-26 23:45:49 [http-nio-8080-exec-4] DEBUG c.Ash_Conversion.service.UserService - Appel de userDAO.create() pour username: Nounou
+2026-01-26 23:45:49 [http-nio-8080-exec-4] INFO  com.Ash_Conversion.dao.UserDAO - Début de la création de l'utilisateur: Nounou
+2026-01-26 23:45:50 [http-nio-8080-exec-4] INFO  com.Ash_Conversion.dao.UserDAO - Utilisateur créé avec succès: Nounou (ID: 2)
+2026-01-26 23:45:50 [http-nio-8080-exec-4] INFO  c.Ash_Conversion.service.UserService - Nouvel utilisateur inscrit avec succès: Nounou (ID: 2)
+2026-01-26 23:45:50 [http-nio-8080-exec-4] INFO  c.A.controller.BaseController - Utilisateur créé avec succès: Nounou (ID: 2)
+2026-01-26 23:46:09 [http-nio-8080-exec-8] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par username: Nounou
+2026-01-26 23:46:10 [http-nio-8080-exec-8] DEBUG com.Ash_Conversion.dao.UserDAO - Date de dernière connexion mise à jour pour: Nounou
+2026-01-26 23:46:10 [http-nio-8080-exec-8] INFO  c.Ash_Conversion.service.UserService - Utilisateur connecté avec succès: Nounou
+2026-01-26 23:46:10 [http-nio-8080-exec-7] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par ID: 2
+2026-01-26 23:46:11 [http-nio-8080-exec-7] DEBUG c.A.service.FileJobService - Statistiques récupérées pour l'utilisateur: Nounou
+2026-01-26 23:46:14 [http-nio-8080-exec-7] DEBUG c.Ash_Conversion.util.CsrfTokenUtil - Token CSRF généré pour la session: A85DE8A606C28C5955A5AC3E99FE3549
+2026-01-26 23:57:38 [http-nio-8080-exec-1] INFO  com.Ash_Conversion.util.ConfigUtil - Configuration chargée avec succès
+2026-01-26 23:57:38 [http-nio-8080-exec-1] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par ID: 2
+2026-01-26 23:57:38 [http-nio-8080-exec-1] INFO  c.A.service.StorageService - Fichier stocké avec succès: 1769489858346_0784_Horaire_des_examens_intra_2eme_session.pdf pour l'utilisateur 2
+2026-01-26 23:57:38 [http-nio-8080-exec-1] DEBUG com.Ash_Conversion.dao.FileJobDAO - FileJob créé: Horaire_des_examens_intra_2eme_session.pdf
+2026-01-26 23:57:38 [http-nio-8080-exec-1] INFO  c.Ash_Conversion.service.FileService - Fichier uploadé avec succès: Horaire_des_examens_intra_2eme_session.pdf par l'utilisateur Nounou
+2026-01-26 23:57:38 [http-nio-8080-exec-1] INFO  c.A.controller.UploadServlet - Upload réussi: Horaire_des_examens_intra_2eme_session.pdf par Nounou
+2026-01-26 23:57:38 [http-nio-8080-exec-2] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par ID: 2
+2026-01-26 23:57:39 [http-nio-8080-exec-2] DEBUG c.A.service.FileJobService - Statistiques récupérées pour l'utilisateur: Nounou
+2026-01-26 23:59:22 [http-nio-8080-exec-5] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par ID: 2
+2026-01-26 23:59:22 [http-nio-8080-exec-5] DEBUG c.A.service.FileJobService - Statistiques récupérées pour l'utilisateur: Nounou
+2026-01-26 23:59:30 [http-nio-8080-exec-6] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par ID: 2
+2026-01-26 23:59:30 [http-nio-8080-exec-6] DEBUG c.A.service.FileJobService - Statistiques récupérées pour l'utilisateur: Nounou
+2026-01-26 23:59:32 [http-nio-8080-exec-8] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par ID: 2
+2026-01-26 23:59:32 [http-nio-8080-exec-8] DEBUG c.A.service.FileJobService - Statistiques récupérées pour l'utilisateur: Nounou
+2026-01-26 23:59:39 [http-nio-8080-exec-7] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par ID: 2
+2026-01-26 23:59:39 [http-nio-8080-exec-7] DEBUG c.A.service.FileJobService - Statistiques récupérées pour l'utilisateur: Nounou
+2026-01-26 23:59:42 [http-nio-8080-exec-9] DEBUG com.Ash_Conversion.dao.UserDAO - Utilisateur trouvé par ID: 2
+2026-01-26 23:59:42 [http-nio-8080-exec-9] DEBUG c.A.service.FileJobService - Statistiques récupérées pour l'utilisateur: Nounou

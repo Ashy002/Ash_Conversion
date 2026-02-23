@@ -1,0 +1,94 @@
+:root {
+   
+    --bg-page: #fdf5e6;        
+    --bg-card: #faf0e6;        
+    --text-main: #3e2723;      
+    --text-muted: #6d4c41;     
+    --accent-coffee: #8b4513;  
+    --accent-paper: #d7ccc8;  
+    
+   
+    --soft-green: #e8ede4; 
+    --soft-green-dark: #64a77ea1; 
+    --text-green: #4f5d45;
+
+    
+    --success-soft: #6d8063;
+    --danger-soft: #a0522d;
+}
+
+
+body {
+    background-color: var(--bg-page) !important;
+    color: var(--text-main) !important;
+    font-family: 'Georgia', serif;
+}
+
+.navbar, .bg-primary {
+    background-color: var(#64a77ea1) !important;
+    border-bottom: 1px solid var(--accent-paper) !important;
+}
+
+
+.navbar-brand, .nav-link {
+    color: var(--text-main) !important;
+}
+
+
+.btn-logout {
+    background-color: var(--danger-soft) !important; 
+    color: white !important;
+    border: none !important;
+}
+
+.btn-custom-green {
+    background-color: var(--soft-green) !important;
+    color: var(--text-green) !important;
+    border: 1px solid var(--soft-green-dark) !important;
+    font-weight: 600 !important;
+}
+
+.btn-custom-green:hover {
+    background-color: var(--soft-green-dark) !important;
+    color: var(--text-main) !important;
+}
+
+
+.stats-card {
+    background-color: var(--bg-card) !important;
+    border: 1px solid var(--accent-paper) !important;
+    border-radius: 12px !important;
+    height: 100%;
+    transition: transform 0.2s;
+}
+
+.stats-card:hover { transform: translateY(-3px); }
+
+.stats-icon-wrapper {
+    font-size: 2.2rem;
+    opacity: 0.3;
+    color: var(--text-main);
+}
+
+
+.table {
+    color: var(--text-main) !important;
+}
+
+.badge.bg-primary { 
+    background-color: var(--soft-green-dark) !important;
+    color: var(--text-main) !important;
+}
+
+.badge.bg-success { 
+    background-color: var(--success-soft) !important;
+}
+
+.badge.bg-danger { 
+    background-color: var(--danger-soft) !important;
+}
+
+.btn-outline-primary, .btn-outline-info {
+    color: var(--accent-coffee) !important;
+    border-color: var(--accent-paper) !important;
+}

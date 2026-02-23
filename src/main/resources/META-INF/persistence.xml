@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+             https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+
+    <persistence-unit name="Ash_ConversionPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        
+        <class>com.Ash_Conversion.model.entity.User</class>
+        <class>com.Ash_Conversion.model.entity.FileJob</class>
+        <class>com.Ash_Conversion.model.entity.ShareToken</class>
+
+        <properties>
+            <!-- MySQL Connection -->
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Ash_Conversion?useSSL=false&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true&amp;useUnicode=true&amp;characterEncoding=UTF-8"/>
+            <property name="jakarta.persistence.jdbc.user" value="root"/>
+            <property name="jakarta.persistence.jdbc.password" value="Lyne@002#Assouh"/>
+            
+            <!-- Schema Generation: 'none' pour utiliser les scripts SQL manuels, ou 'update' pour auto-create -->
+            <property name="jakarta.persistence.schema-generation.database.action" value="none"/>
+            <!-- Alternative pour développement: utiliser 'update' à la place de 'none' -->
+            <!-- <property name="jakarta.persistence.schema-generation.database.action" value="update"/> -->
+            
+            <!-- EclipseLink Properties -->
+            <property name="eclipselink.logging.level" value="INFO"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+            <property name="eclipselink.target-database" value="MySQL"/>
+            <property name="eclipselink.ddl-generation" value="none"/>
+            
+            <!-- Connection Pooling (EclipseLink defaults, compatible MySQL) -->
+            <property name="eclipselink.connection-pool.default.initial" value="1"/>
+            <property name="eclipselink.connection-pool.default.min" value="1"/>
+            <property name="eclipselink.connection-pool.default.max" value="10"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>
+
