@@ -1,18 +1,27 @@
-
+# Étape 1 : Build
 FROM maven:3.9.6-eclipse-temurin-21 AS build
 WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 RUN mvn clean package -DskipTests
 
-
+# Étape 2 : Run
 FROM tomcat:10.1-jdk21
 
-RUN rm -rf /usr/local/tomcat/webapps/*
+# Installation de 'envsubst' pour injecter les variables
+RUN apt-get update && apt-get install -gettext-base -y && rm -rf /var/lib/apt/lists/*
 
+WORKDIR /usr/local/tomcat
 
-COPY --from=build /app/target/*.war /usr/local/tomcat/webapps/ROOT.war
+# On vide les apps par défaut
+RUN rm -rf webapps/*
 
-EXPOSE 8080
+# On copie le war
+COPY --from=build /app/target/*.war webapps/ROOT.war
 
-CMD ["catalina.sh", "run"]
+# Script pour injecter les variables dans le persistence.xml à l'intérieur du WAR
+CMD unzip webapps/ROOT.war WEB-INF/classes/META-INF/persistence.xml -d /tmp && \
+    envsubst < /tmp/WEB-INF/classes/META-INF/persistence.xml > /tmp/persistence.xml.tmp && \
+    mv /tmp/persistence.xml.tmp /tmp/WEB-INF/classes/META-INF/persistence.xml && \
+    zip -j webapps/ROOT.war /tmp/WEB-INF/classes/META-INF/persistence.xml && \
+    catalina.sh run
