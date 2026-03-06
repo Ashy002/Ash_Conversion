@@ -1,2 +1,21 @@
-/logs/ /target/ uploads/
+# Build artifacts
+/target/
+*.war
+*.jar
+*.ear
+
+# Logs
+/logs/
 *.log
+
+# Editor settings
+.vscode/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
