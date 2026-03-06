@@ -8,15 +8,13 @@ RUN mvn clean package -DskipTests
 # Étape 2 : Run
 FROM tomcat:10.1-jdk21
 
-# Installation de 'envsubst' pour injecter les variables
-RUN apt-get update && apt-get install -gettext-base -y && rm -rf /var/lib/apt/lists/*
+# Installation des outils nécessaires (Correction du tiret ici)
+RUN apt-get update && apt-get install -y gettext-base zip unzip && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /usr/local/tomcat
-
-# On vide les apps par défaut
 RUN rm -rf webapps/*
 
-# On copie le war
+# Copie du war
 COPY --from=build /app/target/*.war webapps/ROOT.war
 
 # Script pour injecter les variables dans le persistence.xml à l'intérieur du WAR
