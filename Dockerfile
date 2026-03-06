@@ -6,8 +6,7 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 
 # Étape 2 : Run avec Tomcat
-FROM tomcat:10.1-jdk21-slim 
-# Note : 'slim' est plus léger, ce qui économise tes crédits Railway !
+FROM tomcat:10.1-jdk21
 
 RUN rm -rf /usr/local/tomcat/webapps/*
 
