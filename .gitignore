@@ -1,0 +1,2 @@
+/logs/ /target/ uploads/
+*.log
