@@ -65,10 +65,12 @@ public class TestUserInitializer implements ServletContextListener {
                 logger.info("  Username: {}", TEST_USERNAME);
                 logger.info("  Email: {}", TEST_EMAIL);
                 logger.info("  Password: {}", TEST_PASSWORD);
-            } else {
-                logger.info("Utilisateur de test existe déjà: {}", TEST_USERNAME);
-            }
-            
+           // APRÈS
+} else {
+    existingUser.setPasswordHash(PasswordUtil.hashPassword(TEST_PASSWORD));
+    userDAO.update(existingUser);
+    logger.info("✅ Mot de passe de ASHY mis à jour avec BCrypt");
+}
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             logger.error("Interruption lors de l'initialisation de l'utilisateur de test", e);
