@@ -7,20 +7,17 @@
 
     <persistence-unit name="Ash_ConversionPU" transaction-type="RESOURCE_LOCAL">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        
+
         <class>com.Ash_Conversion.model.entity.User</class>
         <class>com.Ash_Conversion.model.entity.FileJob</class>
         <class>com.Ash_Conversion.model.entity.ShareToken</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://${MYSQLHOST}:${MYSQLPORT}/${MYSQLDATABASE}?useSSL=false&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true"/>
-            <property name="jakarta.persistence.jdbc.user" value="${MYSQLUSER}"/>
-            <property name="jakarta.persistence.jdbc.password" value="${MYSQLPASSWORD}"/>
-            
+            <!-- L'URL, user et password sont injectés dynamiquement par DatabaseInitializer -->
+
             <property name="jakarta.persistence.schema-generation.database.action" value="create"/>
             <property name="eclipselink.ddl-generation" value="create-tables"/>
-            
             <property name="eclipselink.logging.level" value="INFO"/>
             <property name="eclipselink.target-database" value="MySQL"/>
         </properties>
