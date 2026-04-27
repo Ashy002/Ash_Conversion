@@ -1,6 +1,6 @@
-package com.Ash_Conversion.util;
+package com.conversion.util;
 
-import com.Ash_Conversion.exception.FileUploadException;
+import com.conversion.exception.FileUploadException;
 import jakarta.servlet.http.Part;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

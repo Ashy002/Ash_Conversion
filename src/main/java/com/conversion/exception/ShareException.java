@@ -1,4 +1,4 @@
-package com.Ash_Conversion.exception;
+package com.conversion.exception;
 
 public class ShareException extends Exception {
     

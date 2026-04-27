@@ -1,16 +1,14 @@
-package com.Ash_Conversion.controller;
+package com.conversion.controller;
 
-import com.Ash_Conversion.constants.RouteConstants;
-import com.Ash_Conversion.constants.ViewConstants;
-import com.Ash_Conversion.model.entity.User;
-import com.Ash_Conversion.model.enums.ConversionStatus;
-import com.Ash_Conversion.service.FileJobService;
-import com.Ash_Conversion.service.UserService;
+import com.conversion.constants.RouteConstants;
+import com.conversion.model.entity.User;
+import com.conversion.model.enums.ConversionStatus;
+import com.conversion.service.FileJobService;
+import com.conversion.service.UserService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -68,7 +66,7 @@ public class DashboardServlet extends BaseController {
             }
             
             // Valider le terme de recherche
-            if (search != null && !com.Ash_Conversion.util.ValidationUtil.isValidSearchTerm(search)) {
+            if (search != null && !com.conversion.util.ValidationUtil.isValidSearchTerm(search)) {
                 logger.warn("Terme de recherche invalide: {}", search);
                 search = null;
             }
@@ -76,7 +74,7 @@ public class DashboardServlet extends BaseController {
             // Valider et parser le numéro de page
             int page = 0;
             if (pageParam != null && !pageParam.isEmpty()) {
-                if (!com.Ash_Conversion.util.ValidationUtil.isValidPageNumber(pageParam)) {
+                if (!com.conversion.util.ValidationUtil.isValidPageNumber(pageParam)) {
                     logger.warn("Numéro de page invalide: {}", pageParam);
                     page = 0;
                 } else {
@@ -103,7 +101,7 @@ public class DashboardServlet extends BaseController {
             Map<String, Long> stats = fileJobService.getStats(user);
             
             // Récupérer la liste paginée des fichiers
-            List<com.Ash_Conversion.model.entity.FileJob> fileJobs = 
+            List<com.conversion.model.entity.FileJob> fileJobs = 
                 fileJobService.getFileJobs(user, status, search, page, DEFAULT_PAGE_SIZE);
             
             // Compter le total pour la pagination

@@ -1,11 +1,11 @@
-package com.Ash_Conversion.service;
+package com.conversion.service;
 
-import com.Ash_Conversion.exception.FileUploadException;
-import com.Ash_Conversion.model.entity.FileJob;
-import com.Ash_Conversion.model.entity.User;
-import com.Ash_Conversion.model.enums.ConversionStatus;
-import com.Ash_Conversion.model.enums.ConversionType;
-import com.Ash_Conversion.util.FileUtil;
+import com.conversion.exception.FileUploadException;
+import com.conversion.model.entity.FileJob;
+import com.conversion.model.entity.User;
+import com.conversion.model.enums.ConversionStatus;
+import com.conversion.model.enums.ConversionType;
+import com.conversion.util.FileUtil;
 import jakarta.servlet.http.Part;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

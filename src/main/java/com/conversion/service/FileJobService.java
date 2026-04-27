@@ -1,9 +1,9 @@
-package com.Ash_Conversion.service;
+package com.conversion.service;
 
-import com.Ash_Conversion.dao.FileJobDAO;
-import com.Ash_Conversion.model.entity.FileJob;
-import com.Ash_Conversion.model.entity.User;
-import com.Ash_Conversion.model.enums.ConversionStatus;
+import com.conversion.dao.FileJobDAO;
+import com.conversion.model.entity.FileJob;
+import com.conversion.model.entity.User;
+import com.conversion.model.enums.ConversionStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

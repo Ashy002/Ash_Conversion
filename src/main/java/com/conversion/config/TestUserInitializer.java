@@ -1,9 +1,8 @@
-package com.Ash_Conversion.config;
+package com.conversion.config;
 
-import com.Ash_Conversion.config.DatabaseInitializer;
-import com.Ash_Conversion.dao.UserDAO;
-import com.Ash_Conversion.model.entity.User;
-import com.Ash_Conversion.util.PasswordUtil;
+import com.conversion.dao.UserDAO;
+import com.conversion.model.entity.User;
+import com.conversion.util.PasswordUtil;
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;

@@ -1,7 +1,7 @@
-package com.Ash_Conversion.dao;
+package com.conversion.dao;
 
-import com.Ash_Conversion.config.DatabaseConfig;
-import com.Ash_Conversion.model.entity.ShareToken;
+import com.conversion.config.DatabaseConfig;
+import com.conversion.model.entity.ShareToken;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.NoResultException;

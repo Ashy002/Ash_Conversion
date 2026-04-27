@@ -1,4 +1,4 @@
-package com.Ash_Conversion.util;
+package com.conversion.util;
 
 import org.mindrot.jbcrypt.BCrypt;
 import org.slf4j.Logger;

@@ -1,6 +1,6 @@
-package com.Ash_Conversion.service;
+package com.conversion.service;
 
-import com.Ash_Conversion.exception.ConversionException;
+import com.conversion.exception.ConversionException;
 import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;

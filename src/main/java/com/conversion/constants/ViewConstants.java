@@ -1,4 +1,4 @@
-package com.Ash_Conversion.constants;
+package com.conversion.constants;
 
 /**
  * Constantes pour les chemins des vues JSP.

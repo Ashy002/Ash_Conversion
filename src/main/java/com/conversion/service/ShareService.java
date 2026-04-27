@@ -1,11 +1,11 @@
-package com.Ash_Conversion.service;
+package com.conversion.service;
 
-import com.Ash_Conversion.util.ConfigUtil;
-import com.Ash_Conversion.dao.ShareTokenDAO;
-import com.Ash_Conversion.exception.ShareException;
-import com.Ash_Conversion.model.entity.FileJob;
-import com.Ash_Conversion.model.entity.ShareToken;
-import com.Ash_Conversion.util.TokenUtil;
+import com.conversion.util.ConfigUtil;
+import com.conversion.dao.ShareTokenDAO;
+import com.conversion.exception.ShareException;
+import com.conversion.model.entity.FileJob;
+import com.conversion.model.entity.ShareToken;
+import com.conversion.util.TokenUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,7 +39,7 @@ public class ShareService {
         }
         
         // Vérifier que le fichier est converti
-        if (fileJob.getStatus() != com.Ash_Conversion.model.enums.ConversionStatus.COMPLETED) {
+        if (fileJob.getStatus() != com.conversion.model.enums.ConversionStatus.COMPLETED) {
             throw new ShareException("Le fichier doit être converti avant d'être partagé");
         }
         

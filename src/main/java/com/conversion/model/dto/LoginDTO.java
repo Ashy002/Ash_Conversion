@@ -1,4 +1,4 @@
-package com.Ash_Conversion.model.dto;
+package com.conversion.model.dto;
 
 public class LoginDTO {
     private String username;

@@ -1,7 +1,7 @@
-package com.Ash_Conversion.model.entity;
+package com.conversion.model.entity;
 
-import com.Ash_Conversion.model.enums.ConversionStatus;
-import com.Ash_Conversion.model.enums.ConversionType;
+import com.conversion.model.enums.ConversionStatus;
+import com.conversion.model.enums.ConversionType;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 

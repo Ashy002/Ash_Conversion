@@ -1,4 +1,4 @@
-package com.Ash_Conversion.config;
+package com.conversion.config;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;

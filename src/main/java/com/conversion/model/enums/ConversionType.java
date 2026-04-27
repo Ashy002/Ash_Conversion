@@ -1,4 +1,4 @@
-package com.Ash_Conversion.model.enums;
+package com.conversion.model.enums;
 
 public enum ConversionType {
     PDF_TO_WORD,

@@ -10,7 +10,7 @@
     <!-- Encoding Filter -->
     <filter>
         <filter-name>EncodingFilter</filter-name>
-        <filter-class>com.Ash_Conversion.filter.EncodingFilter</filter-class>
+        <filter-class>com.conversion.filter.EncodingFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>EncodingFilter</filter-name>
@@ -20,7 +20,7 @@
     <!-- Authentication Filter -->
     <filter>
         <filter-name>AuthenticationFilter</filter-name>
-        <filter-class>com.Ash_Conversion.filter.AuthenticationFilter</filter-class>
+        <filter-class>com.conversion.filter.AuthenticationFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>AuthenticationFilter</filter-name>
@@ -39,7 +39,7 @@
 
     <!-- Database Initializer Listener -->
     <listener>
-        <listener-class>com.Ash_Conversion.config.DatabaseInitializer</listener-class>
+        <listener-class>com.conversion.config.DatabaseInitializer</listener-class>
     </listener>
 
     <!-- Welcome File -->

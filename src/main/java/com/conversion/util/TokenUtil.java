@@ -1,4 +1,4 @@
-package com.Ash_Conversion.util;
+package com.conversion.util;
 
 import java.security.SecureRandom;
 

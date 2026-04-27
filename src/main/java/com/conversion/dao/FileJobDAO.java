@@ -1,9 +1,9 @@
-package com.Ash_Conversion.dao;
+package com.conversion.dao;
 
-import com.Ash_Conversion.config.DatabaseConfig;
-import com.Ash_Conversion.model.entity.FileJob;
-import com.Ash_Conversion.model.entity.User;
-import com.Ash_Conversion.model.enums.ConversionStatus;
+import com.conversion.config.DatabaseConfig;
+import com.conversion.model.entity.FileJob;
+import com.conversion.model.entity.User;
+import com.conversion.model.enums.ConversionStatus;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.NoResultException;

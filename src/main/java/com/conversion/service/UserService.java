@@ -1,12 +1,12 @@
-package com.Ash_Conversion.service;
+package com.conversion.service;
 
-import com.Ash_Conversion.dao.UserDAO;
-import com.Ash_Conversion.exception.AuthenticationException;
-import com.Ash_Conversion.model.dto.LoginDTO;
-import com.Ash_Conversion.model.dto.RegisterDTO;
-import com.Ash_Conversion.model.entity.User;
-import com.Ash_Conversion.util.PasswordUtil;
-import com.Ash_Conversion.util.ValidationUtil;
+import com.conversion.dao.UserDAO;
+import com.conversion.exception.AuthenticationException;
+import com.conversion.model.dto.LoginDTO;
+import com.conversion.model.dto.RegisterDTO;
+import com.conversion.model.entity.User;
+import com.conversion.util.PasswordUtil;
+import com.conversion.util.ValidationUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

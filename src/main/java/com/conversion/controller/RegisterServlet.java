@@ -1,12 +1,12 @@
-package com.Ash_Conversion.controller;
+package com.conversion.controller;
 
-import com.Ash_Conversion.constants.RouteConstants;
-import com.Ash_Conversion.constants.ViewConstants;
-import com.Ash_Conversion.exception.AuthenticationException;
-import com.Ash_Conversion.model.dto.RegisterDTO;
-import com.Ash_Conversion.model.entity.User;
-import com.Ash_Conversion.service.UserService;
-import com.Ash_Conversion.util.FlashMessageUtil;
+import com.conversion.constants.RouteConstants;
+import com.conversion.constants.ViewConstants;
+import com.conversion.exception.AuthenticationException;
+import com.conversion.model.dto.RegisterDTO;
+import com.conversion.model.entity.User;
+import com.conversion.service.UserService;
+import com.conversion.util.FlashMessageUtil;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;

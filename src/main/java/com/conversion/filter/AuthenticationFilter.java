@@ -1,7 +1,7 @@
-package com.Ash_Conversion.filter;
+package com.conversion.filter;
 
-import com.Ash_Conversion.constants.RouteConstants;
-import com.Ash_Conversion.util.JsonResponseUtil;
+import com.conversion.constants.RouteConstants;
+import com.conversion.util.JsonResponseUtil;
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

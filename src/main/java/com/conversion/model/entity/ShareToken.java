@@ -1,4 +1,4 @@
-package com.Ash_Conversion.model.entity;
+package com.conversion.model.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
