@@ -159,7 +159,7 @@
     </dependencies>
 
     <build>
-        <finalName>Ash_Conversion</finalName>
+        <finalName>ROOT</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
