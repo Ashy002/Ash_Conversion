@@ -8,7 +8,7 @@
     <groupId>com.Ash_Conversion</groupId>
     <artifactId>Ash_Conversion</artifactId>
     <version>1.0.0</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 
     <name>Ash_Conversion</name>
     <description>Application Web de conversion de fichiers (PDF, Word, Excel)</description>
@@ -45,7 +45,12 @@
             <version>3.1.1</version>
             <scope>provided</scope>
         </dependency>
-
+        <!-- Embedded Tomcat for local startup -->
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
+            <version>${tomcat.version}</version>
+        </dependency>
         <!-- JSTL -->
         <dependency>
             <groupId>jakarta.servlet.jsp.jstl</groupId>
