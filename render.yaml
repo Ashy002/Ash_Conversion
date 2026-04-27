@@ -1,0 +1,41 @@
+databases:
+  - name: ashconversion-db
+    databaseName: ashconversion
+    user: ashconversion_user
+    plan: free
+
+services:
+  - type: web
+    name: ashconversion
+    env: docker
+    plan: free
+    region: ohio
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: DB_HOST
+        fromDatabase:
+          name: ashconversion-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: ashconversion-db
+          property: port
+      - key: DB_NAME
+        fromDatabase:
+          name: ashconversion-db
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: ashconversion-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: ashconversion-db
+          property: password
+      - key: UPLOAD_DIR
+        value: uploads
+      - key: UPLOAD_ORIGINALS_DIR
+        value: uploads/originals
+      - key: TOKEN_EXPIRATION
+        value: 3600

@@ -1,18 +1,20 @@
-# Étape 1 : Build avec Maven et JDK 17
-FROM maven:3.8.5-openjdk-17 AS build
+FROM eclipse-temurin:21-jdk-jammy AS build
 WORKDIR /app
-COPY pom.xml .
-COPY src ./src
-RUN mvn clean package -DskipTests
 
-# Étape 2 : Run avec Tomcat et JDK 17
-FROM tomcat:10.1-jdk17-temurin
+COPY mvnw pom.xml ./
+COPY .mvn .mvn
+RUN chmod +x mvnw
+RUN ./mvnw -q dependency:go-offline -DskipTests
 
-WORKDIR /usr/local/tomcat
-RUN rm -rf webapps/*
+COPY src src
+RUN ./mvnw -q clean package -DskipTests
 
-# Copie du WAR généré
-COPY --from=build /app/target/ROOT.war webapps/ROOT.war
+FROM eclipse-temurin:21-jre-jammy
+WORKDIR /app
 
-# Démarrage Tomcat
-CMD ["catalina.sh", "run"]
+COPY --from=build /app/target/ash-conversion-0.0.1-SNAPSHOT.war app.war
+
+ENV JAVA_OPTS="-Xmx256m -Xms128m"
+EXPOSE 8080
+
+ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar app.war --server.servlet.register-default-servlet=true"]

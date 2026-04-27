@@ -3,7 +3,7 @@
     <div class="col-md-3">
         <div class="card text-white bg-primary">
             <div class="card-body">
-                <h5 class="card-title">Nombres de Fichiers</h5>
+                <h5 class="card-title">Fichiers au total</h5>
                 <h2 class="card-text" id="statTotal">0</h2>
             </div>
         </div>
@@ -11,7 +11,7 @@
     <div class="col-md-3">
         <div class="card text-white bg-success">
             <div class="card-body">
-                <h5 class="card-title">Convertis</h5>
+                <h5 class="card-title">Réussis</h5>
                 <h2 class="card-text" id="statConverted">0</h2>
             </div>
         </div>

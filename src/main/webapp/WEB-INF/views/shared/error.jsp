@@ -33,7 +33,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erreur - Ash_Conversion</title>
+    <title>Oups, une erreur - Ash Studio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
@@ -45,14 +45,14 @@
                     <div class="card-body text-center py-5">
                         <i class="bi bi-exclamation-triangle-fill text-danger" style="font-size: 4rem;"></i>
                         <h1 class="display-4 mt-3"><c:out value="${statusCode}" /></h1>
-                        <h2 class="mb-4">Erreur</h2>
+                        <h2 class="mb-4">Oups, une erreur</h2>
                         <p class="text-muted mb-4"><c:out value="${errorMessage}" /></p>
                         <div class="d-grid gap-2">
                             <a href="${pageContext.request.contextPath}/dashboard" class="btn btn-primary">
-                                <i class="bi bi-house"></i> Retour au Dashboard
+                                <i class="bi bi-house"></i> Revenir à l’atelier
                             </a>
                             <a href="${pageContext.request.contextPath}/" class="btn btn-outline-secondary">
-                                <i class="bi bi-arrow-left"></i> Retour à l'accueil
+                                <i class="bi bi-arrow-left"></i> Retour à l’entrée
                             </a>
                         </div>
                     </div>

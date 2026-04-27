@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
-<%@ page import="com.Ash_Conversion.util.CsrfTokenUtil" %>
+<%@ page import="com.ashconversion.util.CsrfTokenUtil" %>
 <%@ page import="jakarta.servlet.http.HttpSession" %>
 <%
     // Récupérer les flash messages
@@ -14,111 +14,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription - Ash_Conversion</title>
+    <title>Nouvel espace - Ash Studio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
     <style>
-    :root {
-        --bg-page: #fdf5e6;
-        --bg-card: #faf0e6;
-        --text-main: #3e2723;
-        --text-muted: #6d4c41;
-        --accent-coffee: #8b4513;
-        --accent-paper: #d7ccc8;
-        --soft-green: #e8ede4;
-    }
+        body {
+            background:
+                radial-gradient(circle at 12% 12%, rgba(79,70,229,.22), transparent 28rem),
+                radial-gradient(circle at 88% 90%, rgba(6,182,212,.18), transparent 30rem),
+                #eef2ff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            font-family: "Inter", "Segoe UI", Arial, sans-serif;
+            color: #172033;
+            padding-top: 50px;
+        }
 
-    body {
-        background-color: var(--bg-page);
-        /* Effet subtil de texture papier */
-        background-image: radial-gradient(var(--accent-paper) 0.5px, transparent 0.5px);
-        background-size: 30px 30px;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        padding-top: 50px;
-        font-family: 'Georgia', serif;
-        color: var(--text-main);
-    }
+        .auth-card {
+            border: 1px solid rgba(79,70,229,.16);
+            border-radius: 28px;
+            box-shadow: 0 28px 70px rgba(15,23,42,.16);
+            overflow: hidden;
+            background: rgba(255,255,255,.94);
+            margin-top: 2rem;
+        }
 
-    .auth-card {
-        border: 1px solid var(--accent-paper);
-        border-radius: 12px;
-        box-shadow: 0 15px 35px rgba(62, 39, 35, 0.1);
-        overflow: hidden;
-        background: var(--bg-card);
-        margin-top: 2rem;
-    }
+        .auth-header {
+            background: linear-gradient(135deg, #4f46e5 0%, #0284c7 55%, #06b6d4 100%);
+            color: #fff;
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
 
-    .auth-header {
-        background-color: var(--soft-green);
-        color: var(--text-main);
-        padding: 2rem;
-        text-align: center;
-        border-bottom: 1px solid var(--accent-paper);
-    }
-
-    .auth-header h2 {
-        margin: 0;
-        font-weight: bold;
-    }
-
-    .auth-body {
-        padding: 2.5rem;
-    }
-
-    .form-label {
-        font-weight: 600;
-        color: var(--text-main);
-    }
-
-    .form-control {
-        background-color: #ffffff;
-        border: 1px solid var(--accent-paper);
-        color: var(--text-main);
-    }
-
-    .form-control:focus {
-        border-color: var(--accent-coffee);
-        box-shadow: 0 0 0 0.25rem rgba(139, 69, 19, 0.1);
-    }
-
-    .btn-primary {
-        background-color: var(--accent-coffee);
-        border: none;
-        padding: 0.75rem;
-        font-weight: bold;
-        transition: all 0.3s ease;
-    }
-
-    .btn-primary:hover {
-        background-color: var(--text-main);
-        transform: translateY(-2px);
-    }
-
-    .password-requirements {
-        font-size: 0.85rem;
-        color: var(--text-muted);
-        font-style: italic;
-        margin-top: 0.4rem;
-    }
-
-    .text-decoration-none {
-        color: var(--accent-coffee);
-    }
-
-    .text-decoration-none:hover {
-        color: var(--text-main);
-        text-decoration: underline !important;
-    }
-
-    /* Style pour les alertes */
-    .alert {
-        border-radius: 8px;
-        border: 1px solid rgba(0,0,0,0.05);
-    }
-</style>
+        .auth-header h2 { margin: 0; font-weight: 800; letter-spacing: -0.04em; }
+        .auth-body { padding: 2.5rem; }
+        .form-label { font-weight: 700; color: #172033; font-size: .92rem; }
+        .form-control { background-color: rgba(255,255,255,.92); border: 1px solid rgba(79,70,229,.18); color: #172033; border-radius: 16px; }
+        .form-control:focus { border-color: #4f46e5; box-shadow: 0 0 0 .25rem rgba(79,70,229,.12); background-color: #fff; }
+        .btn-primary { background: linear-gradient(135deg, #4f46e5 0%, #0284c7 55%, #06b6d4 100%); border: none; border-radius: 16px; padding: .85rem; font-weight: 800; transition: all .25s ease; box-shadow: 0 14px 30px rgba(79,70,229,.26); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 18px 38px rgba(2,132,199,.28); filter: brightness(.98); }
+        .text-decoration-none { color: #4f46e5; }
+        .text-decoration-none:hover { color: #0284c7; text-decoration: underline !important; }
+    </style>
     
 </head>
 <body>
@@ -127,8 +66,8 @@
             <div class="col-md-6 col-lg-5">
                 <div class="card auth-card">
                     <div class="auth-header">
-                        <h2><i class="bi bi-person-plus"></i> Inscription</h2>
-                        <p class="mb-0 mt-2 opacity-75">Créez un compte</p>
+                        <h2><i class="bi bi-rocket-takeoff"></i> Créer votre espace</h2>
+                        <p class="mb-0 mt-2 opacity-75">Démarrez avec une interface plus moderne</p>
                     </div>
                     <div class="auth-body">
                         <!-- Flash Messages -->
@@ -149,7 +88,7 @@
                             <%
                                 // S'assurer que la session existe
                                 HttpSession formSession = request.getSession(true);
-                                String csrfToken = com.Ash_Conversion.util.CsrfTokenUtil.getOrCreateToken(formSession);
+                                String csrfToken = com.ashconversion.util.CsrfTokenUtil.getOrCreateToken(formSession);
                             %>
                             <input type="hidden" name="_csrf" value="<%= csrfToken != null ? csrfToken : "" %>">
                             <div class="mb-3">
@@ -158,7 +97,7 @@
                                 </label>
                                 <input type="text" class="form-control form-control-lg" 
                                        id="username" name="username" 
-                                       placeholder="3-20 caractères (lettres, chiffres, _, -)" 
+                                       placeholder="Choisissez un identifiant clair" 
                                        required autofocus
                                        pattern="[a-zA-Z0-9_-]{3,20}"
                                        title="3-20 caractères (lettres, chiffres, underscore, tiret)">
@@ -172,7 +111,7 @@
                                 </label>
                                 <input type="email" class="form-control form-control-lg" 
                                        id="email" name="email" 
-                                       placeholder="mon@email.com" 
+                                       placeholder="votre@email.com" 
                                        required>
                             </div>
                             <div class="mb-3">
@@ -181,7 +120,7 @@
                                 </label>
                                 <input type="password" class="form-control form-control-lg" 
                                        id="password" name="password" 
-                                       placeholder="Minimum 8 caractères" 
+                                       placeholder="8 caractères minimum" 
                                        required
                                        minlength="8">
                                 <div class="password-requirements">
@@ -194,18 +133,18 @@
                                 </label>
                                 <input type="password" class="form-control form-control-lg" 
                                        id="confirmPassword" name="confirmPassword" 
-                                       placeholder="confirmer votre mot de passe" 
+                                       placeholder="Répétez votre mot de passe" 
                                        required>
                             </div>
                             <button type="submit" class="btn btn-primary w-100 btn-lg mb-3">
-                                <i class="bi bi-person-check"></i> S'inscrire
+                                <i class="bi bi-person-check"></i> Créer un accès
                             </button>
                         </form>
                         <div class="text-center">
                             <p class="mb-0 text-muted">
                                 Avez vous déjà un compte ? 
                                 <a href="${pageContext.request.contextPath}/login" class="text-decoration-none fw-bold">
-                                    Se connecter
+                                    Ouvrir mon espace
                                 </a>
                             </p>
                         </div>
