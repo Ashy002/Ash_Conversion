@@ -44,5 +44,9 @@ app:
   token:
     expiration: ${TOKEN_EXPIRATION:3600}
 
-  debug=true
-    logging.level.org.springframework=DEBUG
+
+debug: true
+
+logging:
+  level:
+    org.springframework: DEBUG
