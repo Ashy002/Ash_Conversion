@@ -8,6 +8,15 @@ spring:
     password: ${PGPASSWORD}
     driver-class-name: org.postgresql.Driver
 
+    
+  
+    hikari:
+      keepalive-time: 60000
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      initialization-fail-timeout: 60000
+
   jpa:
     show-sql: false
     open-in-view: false
