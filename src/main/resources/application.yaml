@@ -8,14 +8,12 @@ spring:
     password: ${PGPASSWORD}
     driver-class-name: org.postgresql.Driver
 
-
-
   jpa:
     show-sql: false
     open-in-view: false
     hibernate:
       ddl-auto: update
-      properties:
+    properties:
       hibernate:
         format_sql: true
 
@@ -36,3 +34,6 @@ app:
 
   token:
     expiration: ${TOKEN_EXPIRATION:3600}
+
+  debug=true
+    logging.level.org.springframework=DEBUG
