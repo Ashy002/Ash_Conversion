@@ -259,3 +259,4 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 2026-04-28 08:37:54 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
 2026-04-28 08:37:55 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
 2026-04-28 08:37:55 [main] INFO  c.a.AshConversionApplication - Started AshConversionApplication in 33.46 seconds (process running for 34.544)
+2026-04-28 11:15:24 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h28m15s50ms922�s700ns).
