@@ -1,39 +1,37 @@
-databases:
-  - name: ashconversion-db
-    databaseName: ashconversion
-    user: ashconversion_user
-    plan: free
-
 services:
   - type: web
     name: ashconversion
-    env: docker
+    runtime: docker
     plan: free
     region: ohio
     dockerfilePath: ./Dockerfile
     autoDeploy: true
     envVars:
+      - key: PORT
+        value: 8080
+      - key: DB_SSLMODE
+        value: require
+      - key: JPA_DDL_AUTO
+        value: update
       - key: DB_HOST
         fromDatabase:
-          name: ashconversion-db
+          name: institution-eav-db
           property: host
-      - key: DB_URL
+      - key: DB_PORT
         fromDatabase:
-          name: ashconversion-db
-          property: connectionString
-      - key: DATABASE_URL
-        value: jdbc:postgresql://dpg-d7mh9a67r5hc73876ep0-a.oregon-postgres.render.com:5432/institution_eav_4sbf?sslmode=require
+          name: institution-eav-db
+          property: port
       - key: DB_NAME
         fromDatabase:
-          name: ashconversion-db
+          name: institution-eav-db
           property: database
       - key: DB_USER
         fromDatabase:
-          name: ashconversion-db
+          name: institution-eav-db
           property: user
       - key: DB_PASSWORD
         fromDatabase:
-          name: ashconversion-db
+          name: institution-eav-db
           property: password
       - key: UPLOAD_DIR
         value: uploads
@@ -41,3 +39,9 @@ services:
         value: uploads/originals
       - key: TOKEN_EXPIRATION
         value: 3600
+
+databases:
+  - name: institution-eav-db
+    plan: free
+    databaseName: institution_eav
+    user: institution_eav_user
