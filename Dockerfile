@@ -15,6 +15,9 @@ WORKDIR /app
 COPY --from=build /app/target/ash-conversion-0.0.1-SNAPSHOT.war app.war
 
 ENV JAVA_OPTS="-Xmx256m -Xms128m"
-EXPOSE 8080
 
-ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar app.war --server.servlet.register-default-servlet=true"]
+# 🔥 IMPORTANT
+EXPOSE 10000
+
+# 🔥 UTILISE LE PORT RENDER
+ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -Dserver.port=$PORT -Dserver.address=0.0.0.0 -jar app.war"]
