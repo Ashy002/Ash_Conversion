@@ -19,12 +19,10 @@ services:
           property: host
       - key: DB_URL
         fromDatabase:
-        name: ashconversion-db
-        property: connectionString
-      - key: DB_PORT
-        fromDatabase:
           name: ashconversion-db
-          property: port
+          property: connectionString
+      - key: DATABASE_URL
+        value: jdbc:postgresql://dpg-d7mh9a67r5hc73876ep0-a.oregon-postgres.render.com:5432/institution_eav_4sbf?sslmode=require
       - key: DB_NAME
         fromDatabase:
           name: ashconversion-db
