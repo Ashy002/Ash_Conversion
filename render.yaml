@@ -15,23 +15,23 @@ services:
         value: update
       - key: DB_HOST
         fromDatabase:
-          name: institution-eav-db
+          name: institution-eav-db-m5aq
           property: host
       - key: DB_PORT
         fromDatabase:
-          name: institution-eav-db
+          name: institution-eav-db-m5aq
           property: port
       - key: DB_NAME
         fromDatabase:
-          name: institution-eav-db
+          name: institution-eav-db-m5aq
           property: database
       - key: DB_USER
         fromDatabase:
-          name: institution-eav-db
+          name: institution-eav-db-m5aq
           property: user
       - key: DB_PASSWORD
         fromDatabase:
-          name: institution-eav-db
+          name: institution-eav-db-m5aq
           property: password
       - key: UPLOAD_DIR
         value: uploads
@@ -41,7 +41,7 @@ services:
         value: 3600
 
 databases:
-  - name: institution-eav-db
+  - name: institution-eav-db-m5aq
     plan: free
     databaseName: institution_eav
     user: institution_eav_user
